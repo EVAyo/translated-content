@@ -1,19 +1,15 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/ratio
 ---
+
 {{CSSRef}}
 
-Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/Media_Queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.
+Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/CSS_media_queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.
 
 ## Syntaxe
 
-Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref("&lt;integer&gt;")}}, suivi d'une barre oblique ('/', Unicode` U+002F SOLIDUS`) puis d'un second entier strictement positif (type {{cssxref("&lt;integer&gt;")}}). Il est possible d'avoir des espaces avant et après la barre oblique.
+Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref("&lt;integer&gt;")}}, suivi d'une barre oblique ('/', Unicode `U+002F SOLIDUS`) puis d'un second entier strictement positif (type {{cssxref("&lt;integer&gt;")}}). Il est possible d'avoir des espaces avant et après la barre oblique.
 
 ## Exemples
 
@@ -25,7 +21,7 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 
 ### Ratios fréquemment utilisés
 
-|                      | Ratio                                                                                   | Utilisation                                                                                 |
+|                      | Ratio                                                                                   | Utilisation                                                                                 |
 | -------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![](ratio4_3.png)    | `4/3`                                                                                   | Format traditionnel utilisé par les télévisions au XX<sup>e</sup> siècle.                   |
 | ![](ratio16_9.png)   | `16/9`                                                                                  | Format « moderne » des télévisions.                                                         |
@@ -58,15 +54,13 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.ratio")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/Media_Queries)
+- [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
 - [La caractéristique média aspect-ratio](/fr/docs/Web/CSS/@media/aspect-ratio)

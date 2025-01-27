@@ -1,13 +1,11 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleTimeString
-browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
+
 {{JSRef}}
 
-La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une localisation. Les arguments `locales` (définissant la localisation) et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction. 
+La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une localisation. Les arguments `locales` (définissant la localisation) et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction.
 
 Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.
 
@@ -16,9 +14,9 @@ Les anciennes implémentations ignorent ces arguments, la locale utilisée et le
 ## Syntaxe
 
 ```js
-toLocaleTimeString()
-toLocaleTimeString(locales)
-toLocaleTimeString(locales, options)
+toLocaleTimeString();
+toLocaleTimeString(locales);
+toLocaleTimeString(locales, options);
 ```
 
 ### Paramètres
@@ -36,8 +34,8 @@ Une chaîne de caractères qui représente l'heure de la date indiquée selon de
 
 ## Performances
 
-Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet 
-[`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format)
+Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet
+[`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
 property.
 
 ## Exemples
@@ -74,7 +72,7 @@ console.log(date.toLocaleTimeString("en-US"));
 console.log(date.toLocaleTimeString("en-GB"));
 // → "04:00:00"
 
-// le coréen  utilise une heure sur 12h avec AM/PM
+// le coréen utilise une heure sur 12h avec AM/PM
 console.log(date.toLocaleTimeString("ko-KR"));
 // → "오전 4:00:00"
 
@@ -96,12 +94,12 @@ Les résultats fournis par `toLocaleTimeString()` peuvent être personnalisés g
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // une application peut vouloir utiliser UTC et le montrer
-var options = {timeZone: "UTC", timeZoneName: "short"};
+var options = { timeZone: "UTC", timeZoneName: "short" };
 console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // parfois, même les USA ont besoin du format sur 24h
-console.log(date.toLocaleTimeString("en-US", {hour12: false}));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 ```
 

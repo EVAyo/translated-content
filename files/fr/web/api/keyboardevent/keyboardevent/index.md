@@ -1,26 +1,22 @@
 ---
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
-tags:
-  - API
-  - Clavier
-  - Constructeur
-  - DOM
-  - évènements
-translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
 
-Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
+{{APIRef("UI Events")}}
+
+Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
 
 ## Syntaxe
 
-     event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```js
+event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
 ### Valeurs
 
 - typeArg
-  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
+  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
 - KeyboardEventInit{{optional_inline}}
 
   - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :
@@ -38,18 +34,16 @@ Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEven
     - `"keyCode"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.keyCode")}}.
     - `"which"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.which")}}.
 
-> **Note :** Le dictionnaire `KeyboardEventInit` accepte aussi les champs des dictionnaires {{domxref("UIEvent.UIEvent", "UIEventInit")}} et {{domxref("Event.Event", "EventInit")}}.
+> [!NOTE]
+> Le dictionnaire `KeyboardEventInit` accepte aussi les champs des dictionnaires {{domxref("UIEvent.UIEvent", "UIEventInit")}} et {{domxref("Event.Event", "EventInit")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('UI Events','#interface-keyboardevent','KeyboardEvent()')}}     | {{Spec2('UI Events')}}     | Définition actuelle. |
-| {{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}} | {{Spec2('DOM3 Events')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.KeyboardEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

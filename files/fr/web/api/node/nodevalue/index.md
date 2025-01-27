@@ -1,20 +1,17 @@
 ---
 title: element.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
 
 ## Syntaxe
 
-    value = node.nodeValue;
+```js
+value = node.nodeValue;
+```
 
 `value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
 
@@ -22,7 +19,7 @@ La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud coura
 
 Pour le document lui-même, `nodeValue` renvoie `null`. Pour des nœuds texte, de commentaires et CDATA, `nodeValue` renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.
 
-Le tableau suivant montre les valeurs de retour pour différents types de nœuds :
+Le tableau suivant montre les valeurs de retour pour différents types de nœuds&nbsp;:
 
 <table>
   <tbody>
@@ -81,8 +78,8 @@ Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun eff
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.nodeValue](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
+- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeValue")}}
+{{Compat}}

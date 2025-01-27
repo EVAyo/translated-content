@@ -1,16 +1,8 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS プロパティ
-  - 生成コンテンツ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.content
-translation_of: Web/CSS/content
 ---
+
 {{CSSRef}}
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。 `content` プロパティを使用して挿入されたオブジェクトは、**無名の[置換要素](/ja/docs/Web/CSS/Replaced_element)** になります。
@@ -23,6 +15,7 @@ content: none;
 /* <image> 値 */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
+content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* 生成コンテンツの代替テキスト、レベル 3 の仕様書で追加 */
 content: url("http://www.example.com/test.png") / "This is the alt text";
@@ -55,6 +48,8 @@ content: revert;
 content: unset;
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
 ## 構文
 
 ### 値
@@ -69,12 +64,12 @@ content: unset;
   - : {{cssxref("&lt;image&gt;")}} です。 {{cssxref("url()")}} または {{cssxref("&lt;gradient&gt;")}} データ型、または {{cssxref("element()", "element()")}} 関数で定義されるウェブページの一部です。
 - {{cssxref("counter()")}}
 
-  - : [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
+  - : [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
 
     {{cssxref("counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。{{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます (`decimal` が既定値です)。
 
     {{cssxref("counters()")}} 関数も、 'counters(_名前_, _文字列_)' または 'counters(_名前_, _文字列_, _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。カウンターは指定されたスタイルで表示されます(`decimal` が既定値です)。
- 
+
 - `attr(x)`
   - : 要素の属性の値 `x` を文字列として返します。属性 `x` が存在しない場合は、空文字列が返されます。属性名の大文字と小文字が区別されるかどうかは、文書の言語に依存します。
 - `open-quote` | `close-quote`
@@ -87,7 +82,7 @@ content: unset;
 CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model/Introduction) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 公式定義
@@ -100,7 +95,7 @@ CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Obje
 
 ## 例
 
-<h3 id="Headings_and_quotes">見出しと引用符</h3>
+### 見出しと引用符
 
 この例では引用部分の周りに引用符を挿入し、見出しの前に "Chapter" の語を追加します。
 
@@ -108,21 +103,25 @@ CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Obje
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"
+    >I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.</q
+  >
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/"
+    >Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.</q
+  >
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -141,8 +140,8 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
-  content: "Chapter ";  /* 最後の空白は、追加コンテンツと
+h1::before {
+  content: "Chapter "; /* 最後の空白は、追加コンテンツと
                            残りのコンテンツの間を区切る
                            ものです */
 }
@@ -150,9 +149,9 @@ h1::before  {
 
 #### 結果
 
-<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
+{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-<h3 id="Image_combined_with_text">テキストと組み合わせる画像</h3>
+### テキストと組み合わせる画像
 
 この例はリンクの前に画像を挿入します。画像が見つからなければ、代わりにテキストを挿入します。
 
@@ -166,8 +165,11 @@ h1::before  {
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
-  font: x-small Arial, sans-serif;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
+  font:
+    x-small Arial,
+    sans-serif;
   color: gray;
 }
 ```
@@ -176,7 +178,7 @@ a::before {
 
 {{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
 
-<h3 id="Targeting_classes">クラスのターゲッティング</h3>
+### クラスのターゲッティング
 
 この例はリストの特定の項目の後に追加のテキストを挿入します。
 
@@ -196,7 +198,7 @@ a::before {
 
 ```css
 .new-entry::after {
-  content: " New!";  /* 先頭の空白は、追加コンテンツと
+  content: " New!"; /* 先頭の空白は、追加コンテンツと
                         残りのコンテンツの間を区切る
                         ものです */
   color: red;
@@ -207,17 +209,20 @@ a::before {
 
 {{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-<h3 id="Images_and_element_attributes">画像および要素の属性</h3>
+### 画像および要素の属性
 
 この例はそれぞれのリンクの前に画像を挿入し、後に `id` 属性を追加します。
 
 #### HTML
 
 ```html
-  <li><a id="moz" href="https://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+<ul>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -250,7 +255,7 @@ li {
 
 {{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-<h3 id="Element_replacement">要素の置き換え</h3>
+### 要素の置き換え
 
 この例は、要素の内容を画像で置き換えます。要素の内容を {{cssxref("url()")}} または {{cssxref("&lt;image&gt;")}} の値のどちらかで置き換えることができます。 `::before` または `::after` で追加された内容は、要素の中身が置き換えられるときは生成されません。
 
@@ -267,7 +272,8 @@ li {
   content: url("mdn.svg");
 }
 
-#replaced::after { /* 要素の置換に対応している場合は表示されない */
+#replaced::after {
+  /* 要素の置換に対応している場合は表示されない */
   content: " (" attr(id) ")";
 }
 ```

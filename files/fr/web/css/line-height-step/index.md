@@ -1,13 +1,8 @@
 ---
 title: line-height-step
 slug: Web/CSS/line-height-step
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/line-height-step
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`line-height-step`** définit le pas de hauteur des boîtes de ligne. Quand le pas est positif, les hauteurs des boîtes de ligne sont arrondies au pas le plus proche. Les valeurs négatives sont invalides.
@@ -19,16 +14,20 @@ line-height-step: 18pt;
 
 ## Syntaxe
 
-La propriété `line-height-step` peut être définie avec une valeur de type [`<length>`](#<length>).
+La propriété `line-height-step` peut être définie avec une valeur de type [`<length>`](#length).
 
 ### Valeurs
 
 - `<length>`
   - : La longueur indiquée est utilisée pour calculer le « pas » pour la hauteur de la boîte de chaque ligne. Voir {{cssxref("&lt;length&gt;")}} pour plus d'informations sur ce type de valeur.
 
-### Formal syntax
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -36,13 +35,13 @@ Dans l'exemple suivant, la hauteur de la boîte des lignes pour chaque paragraph
 
 ```css
 :root {
-  font-size: 12pt;
-  --my-grid: 18pt;
-  line-height-step: var(--my-grid);
+  font-size: 12pt;
+  --my-grid: 18pt;
+  line-height-step: var(--my-grid);
 }
 h1 {
-  font-size: 20pt;
-  margin-top: calc(2 * var(--my-grid));
+  font-size: 20pt;
+  margin-top: calc(2 * var(--my-grid));
 }
 ```
 
@@ -52,15 +51,11 @@ Voici le résultat obtenu avec une capture d'écran :
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS Rhythmic Sizing', '#line-height-step', 'line-height-step')}} | {{Spec2('CSS Rhythmic Sizing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height-step")}}
+{{Compat}}
 
 ## Voir aussi
 

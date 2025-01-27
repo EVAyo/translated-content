@@ -1,14 +1,9 @@
 ---
-title: '<nav> : l''élément de section de navigation'
+title: "<nav> : l'élément de section de navigation"
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/nav
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **\<nav>** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.).
 
@@ -21,7 +16,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 ## Notes d'utilisation
 
 - Tous les liens d'un document ne doivent pas faire partie d'un élément `<nav>`. Ce dernier est fait pour créer des blocs conséquents contenants des liens de navigations au sein du document. L'élément {{HTMLElement("footer")}} possède souvent différents liens, il n'a pour autant pas besoin d'être dans un élément {{HTMLElement("nav")}}.
-- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et  un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
+- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
 - Les agents utilisateurs, tels que les lecteurs d'écrans assistant les utilisateurs handicapés, peuvent utiliser cet élément pour déterminer s'il faut omettre ou non le rendu initial du contenu relatif uniquement à la navigation.
 
 ## Exemples
@@ -59,7 +54,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_sectionnant"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
           >contenu sectionnant</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -77,7 +72,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
     </tr>
     <tr>
       <th scope="row"><dfn>Omission de balises</dfn></th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row"><dfn>Parents autorisés</dfn></th>
@@ -101,17 +96,14 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation. |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## Voir aussi
 
 - Les autres éléments HTML en relation avec les sections : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document)
+- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA : le rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
