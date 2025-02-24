@@ -1,16 +1,8 @@
 ---
 title: overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
+
 {{AddonSidebar}}
 
 Masquer tous les éléments de menu par défaut de Firefox en faveur d'un menu contextuel personnalisé.
@@ -23,8 +15,8 @@ Pour appeler cette méthode, votre extension doit avoir la permission `menus.ove
 
 ```js
 browser.menus.overrideContext(
-  contextOptions // object
-)
+  contextOptions, // object
+);
 ```
 
 ### Paramètres
@@ -35,9 +27,9 @@ browser.menus.overrideContext(
 
     - `showDefaults` {{optional_inline}}
       - : `boolean`. S'il faut également inclure les éléments de menu par défaut dans le menu.
-    - `context `{{optional_inline}}
+    - `context` {{optional_inline}}
       - : `string`. Le ContextType à surcharger, pour autoriser les éléments de menu d'autres extensions dans le menu. Actuellement, seuls `'bookmark'` et `'tab'` sont supportés. `showDefaults` ne peut pas être utilisé avec cette option.
-    - `bookmarkId `{{optional_inline}}
-      - : `string`. Requis lorsque le contexte est  `'bookmark'`. Nécessite la permission  'bookmark'.
-    - `tabId `{{optional_inline}}
+    - `bookmarkId` {{optional_inline}}
+      - : `string`. Requis lorsque le contexte est `'bookmark'`. Nécessite la permission 'bookmark'.
+    - `tabId` {{optional_inline}}
       - : `integer`. Requis lorsque le contexte est `'tab'`. Nécessite la permission 'tabs'.

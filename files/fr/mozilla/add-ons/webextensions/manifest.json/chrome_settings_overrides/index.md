@@ -1,14 +1,8 @@
 ---
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - chrome_settings_overrides
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 Utilisez la clé `chrome_settings_overrides` pour remplacer certains paramètres du navigateur. Deux paramètres sont disponibles :
@@ -89,7 +83,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           >".
         </p>
         <p>
-          C'est une 
+          C'est une
           <a
             href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
@@ -107,7 +101,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           peuvent être fournies, y compris des URL pour des recherches plus
           spécialisées comme des recherches d'images. Dans l'URL que vous
           fournissez, utilisez "<code>{searchTerms}</code>" pour interpoler le
-          terme de recherche  dans l'URL, comme :
+          terme de recherche dans l'URL, comme :
           <code>https://www.discogs.com/search/?q={searchTerms}</code>. Vous
           pouvez également fournir des paramètres POST à envoyer avec la
           recherche.
@@ -142,7 +136,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           </dd>
           <dt><code>is_default</code></dt>
           <dd>
-            Booléen: "True" si le moteur de recherch doit être le choix par
+            Booléen: "True" si le moteur de recherche doit être le choix par
             défaut.
           </dd>
           <dt><code>alternate_urls {{optional_inline}}</code></dt>
@@ -210,6 +204,6 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
   </tbody>
 </table>
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

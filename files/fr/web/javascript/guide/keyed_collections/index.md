@@ -1,15 +1,8 @@
 ---
 title: Collections avec clés
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Collections
-  - Guide
-  - JavaScript
-  - Map
-  - set
-translation_of: Web/JavaScript/Guide/Keyed_collections
-original_slug: Web/JavaScript/Guide/Collections_avec_clés
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées avec une clé. Les objets `Map` et `Set` contiennent des éléments sur lesquels on peut itérer dans leur ordre d'insertion.
@@ -33,7 +26,7 @@ sayings.has("bird"); // false
 sayings.delete("dog");
 
 for (var [key, value] of sayings) {
-  console.log(key + " goes " + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -62,7 +55,7 @@ La différence entre le type `Map` et le type `WeakMap` est que les clés d'un o
 
 Pour plus d'informations et d'exemples, voir également le paragraphe « Pourquoi WeakMap ? » sur l'article {{jsxref("WeakMap")}} de la référence.
 
-Un cas d'utilisation des objets `WeakMap` est le stockage de données privées d'un objet ou pour cacher certains détails d'implémentation. L'exemple qui suit est tiré du billet de blog de Nick Fitzgerald [« Masquer des détails d'implémentation avec les WeakMaps ECMAScript 6 »](http://fitzgeraldnick.com/weblog/53/). Les données et méthodes privées sont stockées dans l'objet WeakMap `privates`. Tout ce qui est exposé par l'instance et le prototype est public. Tout ce qui est en dehors est inaccessible car `privates` n'est pas exporté depuis le module :
+Un cas d'utilisation des objets `WeakMap` est le stockage de données privées d'un objet ou pour cacher certains détails d'implémentation. L'exemple qui suit est tiré du billet de blog de Nick Fitzgerald [« Masquer des détails d'implémentation avec les WeakMaps ECMAScript 6 »](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). Les données et méthodes privées sont stockées dans l'objet WeakMap `privates`. Tout ce qui est exposé par l'instance et le prototype est public. Tout ce qui est en dehors est inaccessible car `privates` n'est pas exporté depuis le module :
 
 ```js
 const privates = new WeakMap();
@@ -88,7 +81,7 @@ module.exports = Public;
 
 Les objets {{jsxref("Set")}} sont des ensembles de valeurs. Il est possible de les parcourir dans l'ordre d'insertion des éléments. Une valeur d'un élément `Set` ne peut y apparaître qu'une seule fois, il est unique pour cette instance de `Set`.
 
-Le code suivant illustre certaines opérations basiques avec `Set`. Voir aussi la page {{jsxref("Set")}} pour plus d'exemples et l'API complète.
+Le code suivant illustre certaines opérations basiques avec `Set`. Voir aussi la page {{jsxref("Set")}} pour plus d'exemples et l'API complète.
 
 ```js
 var monEnsemble = new Set();
@@ -113,7 +106,7 @@ Il est possible de créer un {{jsxref("Array")}} à partir d'un `Set` grâce à 
 Array.from(monSet);
 [...monSet2];
 
-monSet2 = new Set([1,2,3,4]);
+monSet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### Comparaison entre `Array` et `Set`

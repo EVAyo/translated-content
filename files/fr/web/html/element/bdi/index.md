@@ -1,30 +1,9 @@
 ---
-title: '<bdi> : l''élément d''isolation bidirectionnelle'
+title: "<bdi> : l'élément d'isolation bidirectionnelle"
 slug: Web/HTML/Element/bdi
-tags:
-  - BDI
-  - BiDi
-  - Directionality
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Internationalization
-  - Left-to-Right
-  - Reference
-  - Right-to-left
-  - Text
-  - Web
-  - direction
-  - i18n
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdi
-browser-compat: html.elements.bdi
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<bdi>`** (ou élément d'isolation de texte bidirectionnel) isole une portée (_span_) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).
 
@@ -53,7 +32,7 @@ Si `TEXTE-INJECTÉ` est un texte écrit de gauche à droite, aucun problème. En
 
 Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
 
-Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)` : isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
+Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
 
 Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sémantique portée sera moindre.
 

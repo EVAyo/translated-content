@@ -1,14 +1,8 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/put
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`put()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un autre _thread_, crée [un clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur puis enregistre ce clone dans le magasin d'objet. Cette méthode permet ainsi d'ajouter de nouveaux enregistrements ou de mettre à jour des enregistrements existants dans un magasin d'objet lorsque la transaction est en mode `readwrite` (lecture-écriture)
@@ -21,8 +15,10 @@ La méthode `put()` permet d'ajouter ou de mettre à jour. Si on souhaite unique
 
 ## Syntaxe
 
-    var request = objectStore.put(monElement);
-    var request = objectStore.put(monElement, cleOptionnelle);
+```js
+var request = objectStore.put(monElement);
+var request = objectStore.put(monElement, cleOptionnelle);
+```
 
 ### Paramètres
 
@@ -75,12 +71,12 @@ Cette méthode peut lever une de ces exceptions {{domxref("DOMException")}} :
           </li>
           <li>
             Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne  dispose pas d'un générateur de clés et le paramètre pour la
+            >), ne dispose pas d'un générateur de clés et le paramètre pour la
             clé n'a pas été utilisé.
           </li>
           <li>
             Le magasin d'objet utilise des clés en ligne (<em>in-line keys</em
-            >), ne  dispose pas d'un générateur de clés et le chemin de clé du
+            >), ne dispose pas d'un générateur de clés et le chemin de clé du
             magasin d'objet ne déclenche pas une clé valide.
           </li>
           <li>
@@ -115,12 +111,14 @@ Dans l'exemple suivant, on effectue une requête pour obtenir l'enregistrement c
 var title = "Walk dog";
 
 // On ouvre une transaction
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On obtient la liste to-do dont le titre correspond
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On récupère les données de l'objet associé
   // à l'enregistrement
   var data = objectStoreTitleRequest.result;
@@ -134,11 +132,13 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // On imprime la transaction à l'origine
   // de la requête
-  console.log("La transaction originelle est " + updateTitleRequest.transaction);
+  console.log(
+    "La transaction originelle est " + updateTitleRequest.transaction,
+  );
 
   // Lorsque cette nouvelle requête a réussi. On affiche
   // les données grâce à la fonction displayData()
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };
@@ -146,20 +146,18 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.put")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

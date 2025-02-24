@@ -1,9 +1,8 @@
 ---
 title: enterkeyhint
 slug: Web/HTML/Global_attributes/enterkeyhint
-translation_of: Web/HTML/Global_attributes/enterkeyhint
-browser-compat: html.global_attributes.enterkeyhint
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`enterkeyhint`**
@@ -25,7 +24,7 @@ ou [`pattern`](/fr/docs/Web/HTML/Element/input#htmlattrdefpattern) pour afficher
 
 ### Valeurs
 
-L'attribut `enterkeyhint` est un attribut à valeur contrainte et accepte uniquement les valeurs suivantes :
+L'attribut `enterkeyhint` est un attribut à valeur contrainte et accepte uniquement les valeurs suivantes&nbsp;:
 
 | Valeur                    | Description                                                                                                        | Libellé de l'exemple (dépend de l'agent utilisateur et de la langue) |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |

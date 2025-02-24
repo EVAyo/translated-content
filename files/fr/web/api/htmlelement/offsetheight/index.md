@@ -1,10 +1,8 @@
 ---
 title: element.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,7 +11,9 @@ Propriété DHTML permettant d'obtenir la hauteur d'un élément par rapport à 
 
 ### Syntaxe
 
-    var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```js
+var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```
 
 _hauteurTotalElem_ est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par `id`. `offsetHeight` est une propriété en lecture seule.
 
@@ -35,7 +35,7 @@ L'exemple d'image ci-avant montre une barre de défilement et un décalage `offs
 
 ### Notes
 
-`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur « border-box » (bordure et boîte).
+`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur «&nbsp;border-box&nbsp;» (bordure et boîte).
 
 ### Références
 
@@ -44,6 +44,6 @@ L'exemple d'image ci-avant montre une barre de défilement et un décalage `offs
 
 ### Voir aussi
 
-- [`element.clientHeight`](/fr/DOM/element.clientHeight)
-- [`element.scrollHeight`](/fr/DOM/element.scrollHeight)
-- [`element.offsetWidth`](/fr/DOM/element.offsetWidth)
+- [`element.clientHeight`](/fr/docs/Web/API/Element/clientHeight)
+- [`element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight)
+- [`element.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth)

@@ -1,8 +1,8 @@
 ---
 title: API Fetch
 slug: Web/API/Fetch_API
-translation_of: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 L'API Fetch fournit une interface pour la récupération de ressources (e.g., à travers le réseau.) Elle paraîtra familière à tout utilisateur de {{domxref("XMLHttpRequest")}}, mais cette nouvelle API propose néanmoins un ensemble de fonctionnalités plus souples et plus puissantes.
@@ -13,7 +13,7 @@ Fetch fournit une définition générique des objets {{domxref("Request")}} et {
 
 Elle fournit également une définition pour des concepts associés tels que CORS et la sémantique de l'en-tête HTTP _origin_, supplantant les définitions précédemment proposées ailleurs.
 
-Pour effectuer une requête et obtenir une ressource, utilisez la méthode {{domxref("GlobalFetch.fetch")}}. Elle est implémentée dans de multiples interfaces, et en particulier dans {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}. Ce qui la rend disponible de la même manière dans tout contexte où vous souhaiteriez récupérer des ressources.
+Pour effectuer une requête et obtenir une ressource, utilisez la méthode {{domxref("GlobalFetch.fetch")}}. Elle est implémentée dans de multiples interfaces, et en particulier dans {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}. Ce qui la rend disponible de la même manière dans tout contexte où vous souhaiteriez récupérer des ressources.
 
 La méthode `fetch()` prend un argument obligatoire, le chemin vers la ressource souhaitée. Elle retourne une promesse qui résout la {{domxref("Response")}} de cette requête, qu'elle soit couronnée de succès ou non. Vous pouvez aussi optionnellement lui passer un objet d'options `init` comme second argument (voir {{domxref("Request")}}.)
 
@@ -21,16 +21,17 @@ Une fois que la {{domxref("Response")}} a été retournée, il y a un ensemble d
 
 Vous pourriez créer une requête et une réponse directement en utilisant les constructeurs {{domxref("Request.Request","Request()")}} et {{domxref("Response.Response","Response()")}}, même s'il est improbable que vous procédiez ainsi. Il est plus probable cependant que leur création résulte des actions d'une autre API (par exemple, {{domxref("FetchEvent.respondWith")}} des _service workers_).
 
-> **Note :** Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/en-US/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement [Utiliser Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch) et [Fetch, les concepts de base](/fr/docs/Web/API/Fetch_API/Using_Fetch).
 
 ### Interrompre un fetch
 
-Les navigateurs ont commencé à ajouter le support expérimental des interfaces {{DOMxRef("AbortController")}} et {{DOMxRef("AbortSignal")}} (connue aussi sous le nom d'API d'interruption), qui autorisent les opérations telles que Fetch et XHR à être interrompue si elles ne sont pas encore achevées. Voir les pages des interfaces pour plus de détails.
+Les navigateurs ont commencé à ajouter le support expérimental des interfaces {{DOMxRef("AbortController")}} et {{DOMxRef("AbortSignal")}} (connue aussi sous le nom d'API d'interruption), qui autorisent les opérations telles que Fetch et XHR à être interrompue si elles ne sont pas encore achevées. Voir les pages des interfaces pour plus de détails.
 
 ## Les interfaces de Fetch
 
 - {{domxref("GlobalFetch")}}
-  - : La méthode `fetch()` est utilisée pour récuperer une ressource.
+  - : La méthode `fetch()` est utilisée pour récuperer une ressource.
 - {{domxref("Headers")}}
   - : Représente les en-têtes de requête et de réponse, vous permettant de les consulter et de prendre différentes décisions en fonction du résultat.
 - {{domxref("Request")}}
@@ -41,22 +42,20 @@ Les navigateurs ont commencé à ajouter le support expérimental des interfaces
 ## Mixin de Fetch
 
 - {{domxref("Body")}}
-  - : Fournit les méthodes relatives au corps de la requête/réponse, vous permettant  de déclarer quel est son type de contenu et comment il doit être manipulé.
+  - : Fournit les méthodes relatives au corps de la requête/réponse, vous permettant de déclarer quel est son type de contenu et comment il doit être manipulé.
 
 ## Spécifications
 
-| Spécification                | Statut                   | Commentaire         |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP](/fr/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch basic concepts](/fr/docs/Web/API/Fetch_API/Using_Fetch)
