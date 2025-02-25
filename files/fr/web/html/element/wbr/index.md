@@ -1,14 +1,9 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur pourra alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.
 
@@ -16,11 +11,11 @@ L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes
 
-- Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code ` U+200B`` ZERO-WIDTH SPACE  `, il se comporte notamment comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre bidirectionnel (cf. {{Glossary("BiDi")}}. Autrement dit : `<div dir=rtl>123,<wbr>456</div>` sera affiché comme `123,456` et non comme `456,123` lorsqu'il n'y a pas de saut de ligne.
+- Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code `U+200B ZERO-WIDTH SPACE`, il se comporte notamment comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre bidirectionnel (cf. {{Glossary("BiDi")}}. Autrement dit : `<div dir=rtl>123,<wbr>456</div>` sera affiché comme `123,456` et non comme `456,123` lorsqu'il n'y a pas de saut de ligne.
 - Pour la même raison, l'élément `< wbr >` n'introduit pas de trait d'union à la fin de ligne. Pour avoir ce caractère, il faudra utiliser l'entité (`& shy;`) (_soft-hyphen_).
 - Cet élément a été initialement implémenté par Internet Explorer 5.5 et est défini officiellement dans la spécification HTML5.
 
@@ -29,7 +24,9 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### HTML
 
 ```html
-<p>http://voici<wbr>.une<wbr>.très<wbr>.très<wbr>.longue<wbr>.URL<wbr>.com/avec<wbr>/pleins<wbr>/de<wbr>/niveaux<wbr>/de<wbr>/pages</p>
+<p>
+  http://voici<wbr />.une<wbr />.très<wbr />.très<wbr />.longue<wbr />.URL<wbr />.com/avec<wbr />/pleins<wbr />/de<wbr />/niveaux<wbr />/de<wbr />/pages
+</p>
 ```
 
 ### Résultat
@@ -90,14 +87,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}
 
 ## Voir aussi
 
