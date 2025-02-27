@@ -1,16 +1,8 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - Audio
-  - BaseAudioContext
-  - Interface
-  - Reference
-  - TopicStub
-  - Web Audio API
-translation_of: Web/API/BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface `BaseAudioContext` agit comme une définition de base pour les graphiques de traitement audio en ligne et hors ligne, comme représenté par {{domxref("AudioContext")}} et {{domxref("OfflineAudioContext")}} respectivement. Vous n'utiliseriez pas `BaseAudioContext` directement — vous utiliseriez ses fonctionnalités via l'une de ces deux interfaces héréditaires.
@@ -30,14 +22,14 @@ Un `BaseAudioContext` peut être une cible d'événements, il implémente donc l
 - {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
   - : Renvoie l'objet {{domxref("AudioListener")}}, utilisé pour la spatialisation 3D.
 - {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
-  - : Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.
+  - : Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.
 - {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
   - : Renvoie l'état actuel de l'`AudioContext`.
 
 ### Gestionnaires d'événements
 
 - {{domxref("BaseAudioContext.onstatechange")}}
-  - : Un gestionnaire d'événements qui s'exécute lorsqu'un événement de type {{event("statechange")}} s'est déclenché. Cela se produit lorsque l'état de l'`AudioContext` change, en raison de l'appel de l'une des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}).
+  - : Un gestionnaire d'événements qui s'exécute lorsqu'un événement de type `statechange` s'est déclenché. Cela se produit lorsque l'état de l'`AudioContext` change, en raison de l'appel de l'une des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}).
 
 ## Méthodes
 
@@ -80,7 +72,7 @@ _Implémente également les méthodes de l'interface_ {{domxref("EventTarget")}}
 - {{domxref("BaseAudioContext.createWaveShaper()")}}
   - : Crée un {{domxref("WaveShaperNode")}}, qui est utilisé pour implémenter des effets de distorsion non linéaires.
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
-  - : Décode de manière asynchrone les données de fichiers audio contenues dans un {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est généralement chargé à partir de l'attribut `response` d'un {{domxref("XMLHttpRequest")}} après avoir défini le `responseType` sur `arraybuffer`. Cette méthode ne foncionne que sur des fichiers complets et non sur des fragments de fichiers audio.
+  - : Décode de manière asynchrone les données de fichiers audio contenues dans un {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est généralement chargé à partir de l'attribut `response` d'un {{domxref("XMLHttpRequest")}} après avoir défini le `responseType` sur `arraybuffer`. Cette méthode ne foncionne que sur des fichiers complets et non sur des fragments de fichiers audio.
 - {{domxref("BaseAudioContext.resume()")}}
   - : Reprend la progression du temps dans un contexte audio précédemment suspendu / mis en pause.
 
@@ -106,16 +98,14 @@ var finish = audioCtx.destination;
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#BaseAudioContext', 'BaseAudioContext')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utilisation de l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utilisation de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioContext")}}
 - {{domxref("OfflineAudioContext")}}

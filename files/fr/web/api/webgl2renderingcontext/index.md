@@ -1,14 +1,8 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Experimental
-  - Reference
-  - WebGL
-  - WebGL2
-translation_of: Web/API/WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.0 pour la surface de dessin d'un élément HTML {{HTMLElement("canvas")}}.
@@ -16,22 +10,23 @@ L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.
 Pour obtenir un objet de cette interface, appelez {{domxref ("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "webgl2" comme argument :
 
 ```js
-var canevas = document.getElementById('monCanevas');
-var gl = canevas.getContext('webgl2');
+var canevas = document.getElementById("monCanevas");
+var gl = canevas.getContext("webgl2");
 ```
 
-> **Note :** WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
+> [!NOTE]
+> WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
 
-Le [didacticiel WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
+Le [didacticiel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
 
 ## Constantes
 
-Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
+Voir la page des [constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
 
 ## Informations d'état
 
 - {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}
-  - : Retourne la valeur indexée pour la `cible` donnée.
+  - : Retourne la valeur indexée pour la `cible` donnée.
 
 ## Tampons
 
@@ -47,7 +42,7 @@ Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
 ## Tampons d'image
 
 - {{domxref("WebGL2RenderingContext.blitFramebuffer()")}}
-  - : Transfère un bloc de pixels du tampon d'image lu vers le tampon d'image de dessin.
+  - : Transfère un bloc de pixels du tampon d'image lu vers le tampon d'image de dessin.
 - {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}
   - : Attache une seule couche de texture à un tampon d'image.
 - {{domxref("WebGL2RenderingContext.invalidateFramebuffer()")}}
@@ -62,7 +57,7 @@ Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
 - {{domxref("WebGL2RenderingContext.getInternalformatParameter()")}}
   - : Retourne des informations sur le support, dépendant de l'implémentation, des formats internes.
 - {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}}
-  - : Crée et initialise le magasin de données d'un objet tampon de rendu et permet de d'indiquer le nombre d'échantillons à utiliser.
+  - : Crée et initialise le magasin de données d'un objet tampon de rendu et permet de d'indiquer le nombre d'échantillons à utiliser.
 
 ## Textures
 
@@ -81,12 +76,12 @@ Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
 - {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
   - : Spécifie un sous-rectangle tridimensionnel pour une image de texture dans un format compressé.
 
-## Programmes et shaders
+## Programmes et shaders
 
 - {{domxref("WebGL2RenderingContext.getFragDataLocation()")}}
-  - : Retourne la liaison des numéros de couleur aux variables de sortie varying définies par l'utilisateur.
+  - : Retourne la liaison des numéros de couleur aux variables de sortie varying définies par l'utilisateur.
 
-## Uniforms et attributs
+## Uniforms et attributs
 
 - {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
   - : Méthodes spécifiant les valeurs des variables uniform.
@@ -102,11 +97,11 @@ Voir la page des [constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants).
 - {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
   - : Modifie la vitesse à laquelle les attributs de sommet génériques progressent lors du rendu de plusieurs instances de primitives avec {{domxref ("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} et {{domxref("WebGL2RenderingContext.drawElementsInstanced()" , "gl.drawElementsInstanced()")}}.
 - {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances de la plage d'éléments.
+  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances de la plage d'éléments.
 - {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances d'un ensemble d'éléments.
+  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances d'un ensemble d'éléments.
 - {{domxref("WebGL2RenderingContext.drawRangeElements()")}}
-  - : Affiche des primitives à partir des données d'un tableau dans la plage donnée.
+  - : Affiche des primitives à partir des données d'un tableau dans la plage donnée.
 - {{domxref("WebGL2RenderingContext.drawBuffers()")}}
   - : Spécifie une liste de tampons de couleur dans lesquels dessiner.
 - {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
@@ -127,7 +122,7 @@ Méthodes pour travailler avec les objets {{domxref("WebGLQuery")}}.
 - {{domxref("WebGL2RenderingContext.endQuery()")}}
   - : Marque la fin d'une requête asynchrone.
 - {{domxref("WebGL2RenderingContext.getQuery()")}}
-  - : Retourne un objet {{domxref("WebGLQuery")}} pour la cible donnée.
+  - : Retourne un objet {{domxref("WebGLQuery")}} pour la cible donnée.
 - {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
   - : Retourne des informations sur une requête.
 
@@ -138,7 +133,7 @@ Méthodes pour travailler avec les objets {{domxref("WebGLQuery")}}.
 - {{domxref("WebGL2RenderingContext.deleteSampler()")}}
   - : Supprime l'objet {{domxref("WebGLSampler")}} donné.
 - {{domxref("WebGL2RenderingContext.bindSampler()")}}
-  - : Lie le {{domxref("WebGLSampler")}} donné à une unité de texture.
+  - : Lie le {{domxref("WebGLSampler")}} donné à une unité de texture.
 - {{domxref("WebGL2RenderingContext.isSampler()")}}
   - : Retourne `true` si l'objet donné est un objet {{domxref("WebGLSampler")}} valide.
 - {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
@@ -155,7 +150,7 @@ Méthodes pour travailler avec les objets {{domxref("WebGLQuery")}}.
 - {{domxref("WebGL2RenderingContext.deleteSync()")}}
   - : Supprime l'objet {{domxref("WebGLSync")}} donné.
 - {{domxref("WebGL2RenderingContext.clientWaitSync()")}}
-  - : Bloque et attend qu'un objet {{domxref ("WebGLSync")}} reçoive un signal ou que l'expiration du délai donné soit reçue.
+  - : Bloque et attend qu'un objet {{domxref ("WebGLSync")}} reçoive un signal ou que l'expiration du délai donné soit reçue.
 - {{domxref("WebGL2RenderingContext.waitSync()")}}
   - : Retourne immédiatement, mais attend le serveur GL jusqu'à ce que l'objet {{domxref("WebGLSync")}} donné reçoive un signal.
 - {{domxref("WebGL2RenderingContext.getSyncParameter()")}}
@@ -182,12 +177,12 @@ Méthodes pour travailler avec les objets {{domxref("WebGLQuery")}}.
 - {{domxref("WebGL2RenderingContext.pauseTransformFeedback()")}}
   - : Suspend une opération de retour de transformations.
 - {{domxref("WebGL2RenderingContext.resumeTransformFeedback()")}}
-  - : Reprend une opération de retour de transformations.
+  - : Reprend une opération de retour de transformations.
 
 ## Objets tampons uniforms
 
 - {{domxref("WebGL2RenderingContext.bindBufferBase()")}}
-  - : Lie le {{domxref("WebGLBuffer")}} donné au point de liaison donné (`cible`) à l'`indice` donné.
+  - : Lie le {{domxref("WebGLBuffer")}} donné au point de liaison donné (`cible`) à l'`indice` donné.
 - {{domxref("WebGL2RenderingContext.bindBufferRange()")}}
   - : Lie une plage du {{domxref("WebGLBuffer")}} donné au point de liaison donné (`cible`) à l'`indice` donné.
 - {{domxref("WebGL2RenderingContext.getUniformIndices()")}}
@@ -210,7 +205,7 @@ Méthodes pour travailler avec les objets {{domxref("WebGLVertexArrayObject")}} 
 - {{domxref("WebGL2RenderingContext.createVertexArray()")}}
   - : Crée un nouveau {{domxref("WebGLVertexArrayObject")}}.
 - {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
-  - : Supprime le {{domxref("WebGLVertexArrayObject")}} donné.
+  - : Supprime le {{domxref("WebGLVertexArrayObject")}} donné.
 - {{domxref("WebGL2RenderingContext.isVertexArray()")}}
   - : Retourne `true` si l'objet donné est un {{domxref ("WebGLVertexArrayObject")}} valide.
 - {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
@@ -218,13 +213,11 @@ Méthodes pour travailler avec les objets {{domxref("WebGLVertexArrayObject")}} 
 
 ## Spécifications
 
-| Spécification                                                                | Statut                   | Commentaire          |
-| ---------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGL2RenderingContext")}}
+{{Compat}}
 
 ## Voir aussi
 

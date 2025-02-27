@@ -1,25 +1,19 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/margin-inline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`margin-inline`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à   {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`margin-inline`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 ```css
 /* Valeurs de longueur */
 /* Type <length> */
-margin-inline: 10px 20px;  /* Une longueur absolue */
-margin-inline: 1em 2em;    /* Une longueur relative à la taille du texte */
-margin-inline: 5% 2%;      /* Une longueur relative à la largeur ou hauteur du bloc englobant */
-margin-inline: 10px;       /* Une valeur utilisée pour les deux côtés */
+margin-inline: 10px 20px; /* Une longueur absolue */
+margin-inline: 1em 2em; /* Une longueur relative à la taille du texte */
+margin-inline: 5% 2%; /* Une longueur relative à la largeur ou hauteur du bloc englobant */
+margin-inline: 10px; /* Une valeur utilisée pour les deux côtés */
 
 /* Valeurs avec un mot-clé */
 margin-inline: auto;
@@ -38,9 +32,13 @@ Cette propriété est une propriété raccourcie pour les deux propriétés logi
 
 La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -74,17 +72,13 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline", "margin-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-inline")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
+- Les propriétés physiques correspondantes : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
 - Les propriétés qui influencent les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

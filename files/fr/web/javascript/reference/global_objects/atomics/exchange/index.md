@@ -1,24 +1,33 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/exchange
 ---
+
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.exchange()`\*\* permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntaxe
 
-    Atomics.exchange(typedArray, index, valeur)
+```js
+Atomics.exchange(typedArray, index, valeur);
+```
 
 ### Paramètres
 
@@ -35,7 +44,7 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 
@@ -45,19 +54,17 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
-Atomics.exchange(ta, 0, 12);  // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0);          // 12
+Atomics.exchange(ta, 0, 12); // renvoie 0, l'ancienne valeur
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaires                     |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.exchange', 'Atomics.exchange')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.exchange")}}
+{{Compat}}
 
 ## Voir aussi
 
