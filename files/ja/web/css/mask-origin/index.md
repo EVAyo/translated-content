@@ -1,16 +1,8 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-origin
-translation_of: Web/CSS/mask-origin
 ---
+
 {{CSSRef}}
 
 **`mask-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクの原点を設定します。
@@ -52,7 +44,7 @@ mask-origin: unset;
 - `content-box`
   - : 位置がコンテンツボックスからの相対位置になります。
 - `padding-box`
-  - : 位置がパディングボックスからの相対位置になります。単純なボックスでは `0 0` がパディング境界の左上隅で、 `100% 100%` は右下隅です。
+  - : 位置がパディングボックスからの相対位置になります。単純なボックスでは `0 0` がパディング辺の左上隅で、 `100% 100%` は右下隅です。
 - `border-box`
   - : 位置が境界ボックスからの相対位置になります。
 - `margin-box`

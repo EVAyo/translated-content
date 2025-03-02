@@ -1,19 +1,15 @@
 ---
 title: Types WebGL
 slug: Web/API/WebGL_API/Types
-tags:
-  - Reference
-  - Types
-  - WebGL
-translation_of: Web/API/WebGL_API/Types
 ---
-{{WebGLSidebar}}
 
-Les types suivants sont utilisés dans les interfaces [WebGL](/fr-FR/docs/Web/API/WebGL_API).
+{{DefaultAPISidebar("WebGL")}}
+
+Les types suivants sont utilisés dans les interfaces [WebGL](/fr/docs/Web/API/WebGL_API).
 
 ## WebGL 1
 
-Ces types sont utilisés à l'intérieur d'un {{domxref("WebGLRenderingContext")}}.
+Ces types sont utilisés à l'intérieur d'un {{domxref("WebGLRenderingContext")}}.
 
 <table class="standard-table">
   <tbody>
@@ -26,8 +22,8 @@ Ces types sont utilisés à l'intérieur d'un {{domxref("WebGLRenderingContext"
       <td><code>GLenum</code></td>
       <td><code>unsigned long</code></td>
       <td>
-        Utilisé pour les enums. Voir aussi la liste des <a
-          href="/fr-FR/docs/Web/API/WebGL_API/Constants"
+        Utilisé pour les enums. Voir aussi la liste des <a
+          href="/fr/docs/Web/API/WebGL_API/Constants"
           >constantes</a
         >.
       </td>
@@ -108,7 +104,7 @@ Ces types sont utilisés à l'intérieur d'un {{domxref("WebGLRenderingContext"
 
 ## WebGL 2
 
-Ces types sont utilisés à l'intérieur d'un {{domxref("WebGL2RenderingContext")}}. Tous les types WebGL 1 sont également utilisés.
+Ces types sont utilisés à l'intérieur d'un {{domxref("WebGL2RenderingContext")}}. Tous les types WebGL 1 sont également utilisés.
 
 <table class="standard-table">
   <tbody>
@@ -127,7 +123,7 @@ Ces types sont utilisés à l'intérieur d'un {{domxref("WebGL2RenderingContext
 
 ## Extensions WebGL
 
-Ces types sont utilisés à l'intérieur des [extensions WebGL](/fr-FR/docs/Web/API/WebGL_API/Using_Extensions).
+Ces types sont utilisés à l'intérieur des [extensions WebGL](/fr/docs/Web/API/WebGL_API/Using_Extensions).
 
 <table class="standard-table">
   <tbody>
@@ -146,11 +142,7 @@ Ces types sont utilisés à l'intérieur des [extensions WebGL](/fr-FR/docs/Web
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                           | Commentaire                        |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------- |
-| {{SpecName('WebGL', "#5.1", "Types")}}                             | {{Spec2('WebGL')}}                         | Définition initiale                |
-| {{SpecName('WebGL2', "#3.1", "Types")}}                             | {{Spec2('WebGL2')}}                         | Définit des types supplémentaires. |
-| {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}} | {{Spec2('EXT_disjoint_timer_query')}} | Ajoute `GLuint64EXT`               |
+{{Specifications}}
 
 ## Voir aussi
 

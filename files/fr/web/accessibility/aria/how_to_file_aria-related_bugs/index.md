@@ -1,15 +1,14 @@
 ---
 title: Comment déposer un bug lié à ARIA
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-tags:
-  - ARIA
-  - Bugzilla
-translation_of: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-original_slug: Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA
 ---
+
+{{AccessibilitySidebar}}
+
 L'état de la technologie ARIA a toujours dépendu de la communauté. Si vous remarquez un problème d'implémentation, veuillez prendre un instant pour en informer les développeurs. Voici comment déposer les bugs :
 
-> **Note :** Quand vous trouvez un bug, veuillez en aviser les tables de compatibilité liées dans la [page des exemples.](/fr/ARIA/examples)
+> [!NOTE]
+> Quand vous trouvez un bug, veuillez en aviser les tables de compatibilité liées dans la [page des exemples.](/fr/ARIA/examples)
 
 A faire : ajouter la bon lien d'accessibilité à la table
 
@@ -46,7 +45,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >commentaires, questions et retours Window-Eyes </a
         >(email)
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>
@@ -69,7 +68,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
     <tr>
       <td><a href="/User:orca.clock">Orca</a></td>
       <td><a href="/fr/DOM/File">Déposer un bug Orca</a></td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1" rowspan="5">Navigateurs</td>
@@ -79,7 +78,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >Déposer un bug WebKit.org</a
         >
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Google Chrome</td>
@@ -88,7 +87,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
           >Déposer un bug Chromium</a
         >
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td><p>Microsoft Internet Explorer</p></td>
@@ -134,7 +133,7 @@ A faire : ajouter la bon lien d'accessibilité à la table
     <tr>
       <td>Google Web Toolkit (GWT)</td>
       <td><a href="/fr/DOM/File">Déposer un bug GWT</a></td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Yahoo User Interface</td>
