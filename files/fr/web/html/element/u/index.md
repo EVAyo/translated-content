@@ -1,24 +1,37 @@
 ---
-title: '<u> : l''élément d''annotation non textuelle'
+title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Element/u
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/u
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<u>`** permet d'afficher un fragment de texte qui est annoté avec des éléments non textuels. Par défaut, le contenu de l'élément est souligné. Cela pourra par exemple être le cas pour marquer un texte comme étant un nom propre chinois, ou pour marquer un texte qui a été mal orthographié.
 
-> **Attention :** Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{cssxref("text-decoration")}} avec la valeur `"underline"`.
+> [!WARNING]
+> Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{cssxref("text-decoration")}} avec la valeur `"underline"`.
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -26,7 +39,8 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 La spécification rappelle que dans la majorité des cas, d'autres éléments que `<u>` doivent être utilisés.
 
-> **Note :** Attention à la mise en forme par défaut d'un élément `<u>` qui le souligne. Cela peut être source de confusion entre un tel texte et un lien hypertexte (également souligné par défaut).
+> [!NOTE]
+> Attention à la mise en forme par défaut d'un élément `<u>` qui le souligne. Cela peut être source de confusion entre un tel texte et un lien hypertexte (également souligné par défaut).
 
 ### Cas d'utilisation
 
@@ -82,13 +96,13 @@ La plupart du temps, ce n'est pas l'élément `<u>` qu'il faut utiliser. Voici q
 
 #### Souligner pour la simple mise en forme
 
-Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS  {{cssxref("text-decoration")}} et la valeur `"underline"` :
+Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS {{cssxref("text-decoration")}} et la valeur `"underline"` :
 
 ##### HTML
 
 ```html
 <span class="underline">Le plat du jour</span>
-<br>
+<br />
 Soupe de potiron avec un soupçon de noix de muscade
 ```
 
@@ -153,7 +167,7 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -177,17 +191,13 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-u-element', '&lt;u&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-u-element', '&lt;u&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.u")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Les éléments {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}} et {{HTMLElement("cite")}} qui, selon les cas, peuvent être utilisés à la place de `<u>`.
+- Les éléments {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}} et {{HTMLElement("cite")}} qui, selon les cas, peuvent être utilisés à la place de `<u>`.
 - La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir un effet stylistique semblable à la mise en forme par défaut d'un élément `<u>`.

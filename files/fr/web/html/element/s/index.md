@@ -1,31 +1,36 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/s
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+<p>SOLD OUT!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+s {
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
 ### HTML
 
 ```html
-<p>
-  <s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em>
-</p>
+<p><s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em></p>
 ```
 
 ### Résultat
@@ -36,29 +41,31 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
 
-    s::before,
-    s::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    s::before {
-      content: " [Début du texte rayé]";
-    }
+s::before {
+  content: " [Début du texte rayé]";
+}
 
-    s::after {
-      content: " [Fin du texte rayé] ";
-    }
+s::after {
+  content: " [Fin du texte rayé] ";
+}
+```
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été rayé.
 
 - [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Résumé technique
 
@@ -90,7 +97,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -114,17 +121,14 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{obsolete_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
+- {{deprecated_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
 - {{HTMLElement("del")}} qui est utilisé afin d'indiquer des données ou des portions de texte qui ont été supprimées
 - La propriété CSS {{cssxref("text-decoration-line")}} qui permet de contrôler l'aspect de la ligne utilisée sur le contenu de l'élément {{HTMLElement("s")}}

@@ -1,22 +1,17 @@
 ---
 title: DeviceMotionEvent.DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
-tags:
-  - API
-  - Constructeurs
-  - Mobile
-  - Mouvement
-  - Orientation
-  - axes
-translation_of: Web/API/DeviceMotionEvent/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{Non-standard_header}}
 
 Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotionEvent")}}.
 
 ## Syntaxe
 
-    var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```js
+var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```
 
 ### Paramètres
 
@@ -26,7 +21,7 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
   - : Les options sont les suivantes :
 
-    - `acceleration` : un  objet donnant l'accélération de l'appareil sur les 3 axes X, Y et Z. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared)
+    - `acceleration` : un objet donnant l'accélération de l'appareil sur les 3 axes X, Y et Z. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared)
 
       <sup>2</sup>
 
@@ -43,10 +38,8 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.DeviceMotionEvent")}}
+{{Compat}}

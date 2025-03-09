@@ -1,20 +1,15 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-inline-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-inline-end`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant à la fin de l'élément dans le sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} et {{cssxref("border-inline-end-color")}}.
 
 {{EmbedInteractiveExample("pages/css/border-inline-end.html")}}
 
-Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés :
 
@@ -41,9 +36,13 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 - `<'color'>`
   - : La couleur de la bordure sur ce côté, voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end", "border-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-end")}}
+{{Compat}}
 
 ## Voir aussi
 

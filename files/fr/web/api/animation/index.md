@@ -1,20 +1,11 @@
 ---
 title: Animation
 slug: Web/API/Animation
-tags:
-  - API
-  - Animations
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animation api
-translation_of: Web/API/Animation
 ---
+
 {{ APIRef("Web Animations API") }}{{SeeCompatTable}}
 
-L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_Animations_API) correspond à un lecteur d'animations et offre les commandes nécessaires au contrôle et à la chronologie d'un noeud ou d'une source d'animation.
+L'interface **`Animation`** de [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API) correspond à un lecteur d'animations et offre les commandes nécessaires au contrôle et à la chronologie d'un noeud ou d'une source d'animation.
 
 ## Constructeur
 
@@ -31,7 +22,7 @@ L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_An
 - {{domxref("Animation.effect")}}
   - : Récupère et défini le {{domxref("KeyframeEffect")}} associé à cette animation.
 - {{domxref("Animation.finished")}} {{readOnlyInline}}
-  - : Retourne la `Promise `terminée en cours pour cette animation.
+  - : Retourne la `Promise` terminée en cours pour cette animation.
 
 <!---->
 
@@ -48,7 +39,7 @@ L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_An
 <!---->
 
 - {{domxref("Animation.ready")}} {{readOnlyInline}}
-  - : Retourne la `Promise `prête en cours pour l'animation.
+  - : Retourne la `Promise` prête en cours pour l'animation.
 
 <!---->
 
@@ -63,9 +54,9 @@ L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_An
 ### Gestionnaire d'événements
 
 - {{domxref("Animation.oncancel")}}
-  - : Retourne et défini le gestionnaire d'événement pour l'événement `cancel `(annuler).
+  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `cancel` (annuler).
 - {{domxref("Animation.onfinish")}}
-  - : Retourne et défini le gestionnaire d'événement pour l'événement `finish` (terminer).
+  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `finish` (terminer).
 
 ## Méthodes
 
@@ -94,10 +85,8 @@ L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_An
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName("Web Animations", "#the-animation-interface", "Animation")}} | {{Spec2("Web Animations")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Animation")}}
+{{Compat}}

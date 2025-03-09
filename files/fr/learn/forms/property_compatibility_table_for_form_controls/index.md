@@ -1,19 +1,9 @@
 ---
 title: Table de compatibilité des propriétés pour les widgets de formulaire
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Avancé
-  - CSS
-  - Formulaires
-  - Guide
-  - HTML
-  - Indésirables
-  - Mises à jour
-  - Web
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
-original_slug: Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets
 ---
-{{learnsidebar}}{{PreviousMenu("Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
+
+{{learnsidebar}}
 
 Les tables de compatibilité suivantes tentent de résumer l'état de la prise en charge des CSS par les formulaires HTML. Eu égard à la complexité des CSS et des formulaires HTML, ces tables ne peuvent pas être considérées comme un élément de référence parfait. Toutefois, elles vous donneront un bon aperçu de ce qui peut et de ce qui ne peut pas être fait, ce qui vous aidera à apprendre comment faire les choses.
 
@@ -21,7 +11,7 @@ Les tables de compatibilité suivantes tentent de résumer l'état de la prise e
 
 ### Valeurs
 
-Pour chaque propriété, il y a quatre valeurs possibles :
+Pour chaque propriété, il y a quatre valeurs possibles&nbsp;:
 
 - OUI
   - : La prise en charge de la propriété est raisonnablement cohérente d'un navigateur à l'autre. Il se peut que vous soyez encore confronté à des effets collatéraux étranges dans certains cas limites.
@@ -34,7 +24,7 @@ Pour chaque propriété, il y a quatre valeurs possibles :
 
 ### Rendu
 
-Pour chaque propriété il y a deux rendus possibles :
+Pour chaque propriété il y a deux rendus possibles&nbsp;:
 
 - N (Normal)
   - : Indique que la propriété est appliquée telle quelle.
@@ -43,13 +33,13 @@ Pour chaque propriété il y a deux rendus possibles :
 
 ```css
 * {
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
   -webkit-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
   -moz-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
+  /* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
    y compris Opera, Internet Explorer et Firefox */
   background: none;
 }
@@ -91,7 +81,7 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
@@ -137,7 +127,7 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -189,13 +179,13 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
@@ -221,19 +211,19 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Partiel</td>
       <td>Partiel</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Partiel</td>
       <td>Partiel</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -314,7 +304,7 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
@@ -333,13 +323,13 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("border")}}</th>
       <td>Partiel</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -363,7 +353,7 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("color")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
@@ -375,43 +365,43 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td>Partiel</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Partiel</td>
       <td>Partiel</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -422,7 +412,7 @@ Certains comportements sont communs à de nombreux navigateurs au niveau global 
       <th scope="row">{{cssxref("background")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
@@ -471,7 +461,7 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
@@ -490,13 +480,13 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("border")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -520,7 +510,7 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("color")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
@@ -532,43 +522,43 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td>Partiel</td>
       <td>Partiel</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Partiel</td>
       <td>Partiel</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -644,19 +634,19 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("border")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -667,55 +657,55 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("color")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -726,19 +716,19 @@ Sur les navigateurs qui implémentent le widget `number`, il n'y a pas de métho
       <th scope="row">{{cssxref("background")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("box-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -779,19 +769,19 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("height")}}</th>
       <td>Non</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Partiel</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -858,7 +848,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
           <li>
             IE9 ne prend pas en charge cette propriété sur les éléments
             {{HTMLElement("select")}}, {{HTMLElement("option")}},
-            et {{HTMLElement("optgroup")}} ; les navigateurs fondés sur
+            et {{HTMLElement("optgroup")}}&nbsp;; les navigateurs fondés sur
             WebKit sur Mac OSX ne prennent pas en charge cette propriété sur les
             éléments {{HTMLElement("option")}} et
             {{HTMLElement("optgroup")}}.
@@ -888,7 +878,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
           <li>
             Seul Firefox fournit une prise en charge totale de cette propriété.
             Opera ne la prend pas du tout en charge et d'autres navigateur ne le
-            font que pour l'élément  {{HTMLElement("select")}}.
+            font que pour l'élément {{HTMLElement("select")}}.
           </li>
         </ol>
       </td>
@@ -911,7 +901,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
@@ -990,25 +980,25 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -1033,7 +1023,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("color")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
@@ -1085,19 +1075,19 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
@@ -1121,7 +1111,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("background")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
@@ -1168,31 +1158,31 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("width")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1203,55 +1193,55 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("color")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1262,19 +1252,19 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("background")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("box-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -1298,31 +1288,31 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("width")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1333,7 +1323,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("color")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
@@ -1365,13 +1355,13 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
@@ -1390,19 +1380,19 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1426,7 +1416,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
       <th scope="row">{{cssxref("border-radius")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("box-shadow")}}</th>
@@ -1462,31 +1452,31 @@ Beaucoup de propriétés sont prises en charge mais il y a trop d'incohérence e
       <th scope="row">{{cssxref("width")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1497,55 +1487,55 @@ Beaucoup de propriétés sont prises en charge mais il y a trop d'incohérence e
       <th scope="row">{{cssxref("color")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1556,19 +1546,19 @@ Beaucoup de propriétés sont prises en charge mais il y a trop d'incohérence e
       <th scope="row">{{cssxref("background")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("box-shadow")}}</th>
       <td>Non</td>
       <td>Non</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -1594,7 +1584,7 @@ Il n'y a pas actuellement suffisamment d'implémentation pour obtenir des compor
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
@@ -1613,13 +1603,13 @@ Il n'y a pas actuellement suffisamment d'implémentation pour obtenir des compor
       <th scope="row">{{cssxref("border")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -1643,55 +1633,55 @@ Il n'y a pas actuellement suffisamment d'implémentation pour obtenir des compor
       <th scope="row">{{cssxref("color")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1745,25 +1735,25 @@ Il n'y a pas actuellement suffisemment d'implémentation pour obtenir des compor
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Partiel</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -1788,55 +1778,55 @@ Il n'y a pas actuellement suffisemment d'implémentation pour obtenir des compor
       <th scope="row">{{cssxref("color")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -1871,7 +1861,7 @@ Il n'y a pas actuellement suffisemment d'implémentation pour obtenir des compor
 
 ### Widget `range`
 
-Il n'y a pas de méthode standard pour changer le style de la poignée de` range` et Opera n'a aucun moyen de modifier le rendu par défaut du widget `range`.
+Il n'y a pas de méthode standard pour changer le style de la poignée de `range` et Opera n'a aucun moyen de modifier le rendu par défaut du widget `range`.
 
 <table>
   <thead>
@@ -1890,7 +1880,7 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
@@ -1910,13 +1900,13 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("border")}}</th>
       <td>Non</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
@@ -1940,55 +1930,55 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("color")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -2040,31 +2030,31 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("width")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("height")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("margin")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("padding")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -2075,55 +2065,55 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("color")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("font")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("letter-spacing")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-align")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-decoration")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-indent")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-overflow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-shadow")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("text-transform")}}</th>
       <td style="text-align: center; vertical-align: top">N.A.</td>
       <td style="text-align: center; vertical-align: top">N.A.</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
   <tbody>
@@ -2134,7 +2124,7 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
       <th scope="row">{{cssxref("background")}}</th>
       <td>Oui</td>
       <td>Oui</td>
-      <td colspan="1"> </td>
+      <td colspan="1"> </td>
     </tr>
     <tr>
       <th scope="row">{{cssxref("border-radius")}}</th>
@@ -2158,19 +2148,3 @@ Il n'y a pas de méthode standard pour changer le style de la poignée de` range
     </tr>
   </tbody>
 </table>
-
-{{PreviousMenu("Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- Table de compatibilité des propriétés pour les widgets de formulaire

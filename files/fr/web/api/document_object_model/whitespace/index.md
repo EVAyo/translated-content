@@ -1,31 +1,31 @@
 ---
 title: Gestion des espaces dans le DOM
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
+
+{{DefaultAPISidebar("DOM")}}
+
 ## Le problème
 
-La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](fr/CSS) fonctionne.) Cela signifie que :
+La présence d'espaces et de blancs dans le [DOM](/fr/docs/Web/API/Document_Object_Model) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](/fr/docs/Web/CSS) fonctionne.) Cela signifie que&nbsp;:
 
 - il y aura certains nœuds texte qui ne contiendront que du vide, et
 - certains nœuds texte commenceront ou se termineront par des blancs.
 
-En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où « \n » représente un retour à la ligne) :
+En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où «&nbsp;\n&nbsp;» représente un retour à la ligne)&nbsp;:
 
-    <!-- My document -->
-    <html>
-    <head>
-      <title>My Document</title>
-    </head>
-    <body>
-      <h1>Header</h1>
-      <p>
-        Paragraph
-      </p>
-    </body>
-    </html>
+```html
+<!-- My document -->
+<html>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
+</html>
+```
 
 ![Arbre du DOM équivalent à l'exemple HTML ci-avant](dom-string.png)
 
@@ -40,25 +40,25 @@ On peut formater leur code comme indiqué ci-dessous pour contourner le problèm
      avec des espaces entre les balises:
  -->
 <div>
- <ul>
-  <li>Position 1</li>
-  <li>Position 2</li>
-  <li>Position 3</li>
- </ul>
+  <ul>
+    <li>Position 1</li>
+    <li>Position 2</li>
+    <li>Position 3</li>
+  </ul>
 </div>
 
 <!-- jolie impression adaptée au problème :
  -->
-<div
- ><ul
-  ><li>Position 1</li
-  ><li>Position 2</li
-  ><li>Position 3</li
- ></ul
-></div>
+<div>
+  <ul>
+    <li>Position 1</li>
+    <li>Position 2</li>
+    <li>Position 3</li>
+  </ul>
+</div>
 ```
 
-Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM :
+Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM&nbsp;:
 
 ```js
 /**
@@ -72,36 +72,34 @@ Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipul
  * espaces (et aussi d'autres caractères).
  */
 
-
 /**
  * Détermine si le contenu du texte d'un nœud est entièrement blanc.
  *
- * @param nod  Un nœud implémentant l'interface |CharacterData| (c'est-à-dire,
+ * @param nod Un nœud implémentant l'interface |CharacterData| (c'est-à-dire,
  *             un nœud |Text|, |Comment| ou |CDATASection|
  * @return     True (vrai) Si tout le contenu du texte du |nod| est un espace,
  *             sinon false (faux).
  */
-function is_all_ws( nod )
-{
+function is_all_ws(nod) {
   // Utilise ECMA-262 Edition 3 chaînes et fonctionnalités RegExp
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * Détermine si le nœud doit être ignoré par les fonctions d'itération.
  *
- * @param nod  Un objet implémentant l'interface DOM1 |Node|.
+ * @param nod Un objet implémentant l'interface DOM1 |Node|.
  * @return     true (vrai) si le nœud est :
  *                1) un nœud |Text| qui est tout en espace
  *                2) un nœud |Comment|
  *             et autrement false (faux).
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // un nœud commentaire
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // un nœud texte, tout espace
+function is_ignorable(nod) {
+  return (
+    nod.nodeType == 8 || // un nœud commentaire
+    (nod.nodeType == 3 && is_all_ws(nod))
+  ); // un nœud texte, tout espace
 }
 
 /**
@@ -111,14 +109,13 @@ function is_ignorable( nod )
  * un enfant du même parent, qui se produit immédiatement avant le
  * nœud référence.)
  *
- * @param sib  Le nœud référence .
+ * @param sib Le nœud référence .
  * @return     soit :
  *               1) le frère précédent le plus proche de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -129,14 +126,13 @@ function node_before( sib )
  * Version de |nextSibling| qui ignore les nœuds qui sont entièrement
  * espace ou commentaire.
  *
- * @param sib  Le nœud référence .
+ * @param sib Le nœud référence .
  * @return     soit :
  *               1) le frère précédent le plus proche de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -149,15 +145,14 @@ function node_after( sib )
  * de tous les nœuds DOM qui donnent le dernier des nœuds contenus
  * directement dans le nœud de référence.)
  *
- * @param sib  Le nœud référence.
+ * @param sib Le nœud référence.
  * @return     soit :
  *               1) Le dernier enfant de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  var res = par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -169,15 +164,14 @@ function last_child( par )
  * Version de |firstChild| qui ignore les nœuds qui sont entièrement
  * espace ou commentaire..
  *
- * @param sib  le nœud référence.
+ * @param sib le nœud référence.
  * @return     soit:
  *               1) le nœud premier enfant de |sib| qui ne peut
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  var res = par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -190,17 +184,15 @@ function first_child( par )
  * et termine et normalise tous les espaces dans un seul espace. (Normalement
  * |data | est une propriété des nœuds de texte qui donne le texte du nœud.)
  *
- * @param txt  Le nœud de texte dont les données doivent être renvoyées
+ * @param txt Le nœud de texte dont les données doivent être renvoyées
  * @return     Une chaîne donnant le contenu du nœud de texte avec
  *             espace blanc s'est effondré.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   var data = txt.textContent;
   // Utilise ECMA-262 Edition 3 chaînes et fonctionnalités RegExp
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
-    data = data.substring(1, data.length);
+  if (data.charAt(0) == " ") data = data.substring(1, data.length);
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
@@ -213,12 +205,10 @@ Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il p
 
 ```js
 var cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
-      cur.className = "magic";
-      cur.firstChild.textContent = "This is the magic paragraph.";
+while (cur) {
+  if (data_of(cur.firstChild) == "This is the third paragraph.") {
+    cur.className = "magic";
+    cur.firstChild.textContent = "This is the magic paragraph.";
   }
   cur = node_after(cur);
 }

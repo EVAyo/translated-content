@@ -1,24 +1,27 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}}.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 
-    dateObj.toString()
+```js
+dateObj.toString();
+```
 
 ### Valeur de retour
 
@@ -79,17 +82,11 @@ var maVar = x.toString(); // assigne une valeur à maVar similaire à :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                      |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.             |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'Date.prototype.toLocaleTimeString')}}         | {{Spec2('ES5.1')}}     |                                                                   |
-| {{SpecName('ES6', '#sec-date.prototype.tostring', 'Date.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                                   |
-| {{SpecName('ES2018', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ES2018')}}     | Standardisation du format produit par `Date.prototype.toString()` |
-| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

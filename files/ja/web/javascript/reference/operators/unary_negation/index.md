@@ -1,24 +1,32 @@
 ---
 title: 単項マイナス (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unary_negation
-translation_of: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 単項マイナス演算子 (`-`) はオペランドの前に置かれ、符号を反転します。
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+
+```js interactive-example
+const x = 4;
+const y = -x;
+
+console.log(y);
+// Expected output: -4
+
+const a = "4";
+const b = -a;
+
+console.log(b);
+// Expected output: -4
+```
 
 ## 構文
 
 ```js
--x
+-x;
 ```
 
 ## 例

@@ -1,27 +1,33 @@
 ---
-title: '<rp> : l''élément de parenthèses alternatif aux annotations Ruby'
+title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rp
 ---
-{{HTMLRef}}
 
-L'élément HTML **`<rp>` **est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
+{{HTMLSidebar}}
+
+L'élément HTML **`<rp>`** est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
 
 Les annotations Ruby permettent d'afficher la prononciation des caractères d'Asie orientale, notamment lors de l'usage de caractères furigana Japonais ou bopomofo Taïwanais.
 
 Un élément `<rp>` devrait encadrer chaque parenthèse ouvrante et fermante englobant l'élément {{HTMLElement("rt")}} contenant les annotations.
 
-{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -31,8 +37,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -80,7 +85,7 @@ body {
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >. Texte.
       </td>
@@ -115,14 +120,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## Voir aussi
 
