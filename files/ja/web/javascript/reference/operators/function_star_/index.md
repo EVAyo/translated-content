@@ -1,23 +1,29 @@
 ---
 title: function* 式
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
-browser-compat: javascript.operators.generator_function
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}</div>
 
 **`function*`** キーワードは、式の中でジェネレーター関数を定義するために使用することができます。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html",
-   "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 構文
 
@@ -42,13 +48,13 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 
 ## 例
 
-### function* の使用
+### function\* の使用
 
 次の例では、無名ジェネレーター関数を定義し、`x` に代入します。関数は引数の二乗を生成します。
 
 ```js
-let x = function*(y) {
-   yield y * y;
+let x = function* (y) {
+  yield y * y;
 };
 ```
 

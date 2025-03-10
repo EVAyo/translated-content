@@ -1,22 +1,39 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<small>`** permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d'un contrat, des mentions relatives au droit d'auteur, etc.) quelle que soit la présentation.
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -24,15 +41,14 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ```html
 <p>
-   Voici une phrase avant des infos à
-   présenter en plus petit.
-   <small>© tous droits réservés</small>
+  Voici une phrase avant des infos à présenter en plus petit.
+  <small>© tous droits réservés</small>
 </p>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("","100%",'')}}
 
 ## Résumé technique
 
@@ -90,15 +106,11 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-small-element', '&lt;small&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-small-element', '&lt;small&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#edef-SMALL', '&lt;small&gt;')}}                 | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## Notes
 

@@ -1,21 +1,17 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-tags:
-  - API
-  - DOM
-  - Liste
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
 
 ## Syntaxe
 
-    nodeList.forEach(callback[, thisArg]);
+```js
+nodeList.forEach(callback[, thisArg]);
+```
 
 ### Paramètres
 
@@ -30,7 +26,7 @@ La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le ra
     - _`listObj`_
       - : L'objet NodeList auquel `forEach()` est appliqué.
 
-- ` thisArg`` {{Optional_inline}}  `
+- `thisArg` {{Optional_inline}}
   - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
 ### Valeur retournée
@@ -55,19 +51,18 @@ node.appendChild(kid3);
 
 var list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 résultat :
 
-    [object HTMLParagraphElement], 0, myThisArg
-    [object Text], 1, myThisArg
-    [object HTMLSpanElement], 2, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
+[object Text], 1, myThisArg
+[object HTMLSpanElement], 2, myThisArg
+```
 
 ## Polyfill
 
@@ -75,25 +70,22 @@ Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les nav
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Définit `NodeList` comme `iterable<Node> `(_noeud itérable_)     |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Définit `forEach` sur les déclarations `iterable` (_itératives_) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,21 +1,17 @@
 ---
 title: WebGLRenderingContext.getError()
 slug: Web/API/WebGLRenderingContext/getError
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getError
 ---
+
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr-Fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
+La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
 
 ## Syntaxe
 
-    GLenum gl.getError();
+```js
+GLenum gl.getError();
+```
 
 ### Paramètres
 
@@ -31,7 +27,7 @@ Aucun.
 | `gl.INVALID_OPERATION`             | La commande indiquée n'est pas permise dans l'état courant. La commande est ignorée et l'indicateur d'erreur est positionné.                                                        |
 | `gl.INVALID_FRAMEBUFFER_OPERATION` | Le tampon d'images actuellement lié n'est pas complet lors d'une tentative de rendu ou de relecture.                                                                                |
 | `gl.OUT_OF_MEMORY`                 | Plus assez de mémoire restante pour exécuter la commande.                                                                                                                           |
-| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
+| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
 
 ## Exemples
 
@@ -44,14 +40,11 @@ gl.getError(); // gl.INVALID_ENUM;
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire               |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "getError")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glGetError.xml", "glGetError")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getError")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,25 +1,34 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Reference/Instructions/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
+L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## Syntaxe
 
-    for (variable in objet) {
-      instructions
-    }
+```js
+for (variable in objet) {
+  instructions;
+}
+```
 
 - `variable`
   - : Un nom de propriété différent est assigné à la variable à chaque itération de la boucle.
@@ -28,7 +37,7 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ## Description
 
-Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes {{jsxref("String.prototype.indexOf","indexOf()")}} du type {{jsxref("String")}} ou {{jsxref("Object.prototype.toString","toString()")}} depuis {{jsxref("Object")}}. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
+Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes {{jsxref("String.prototype.indexOf","indexOf()")}} du type {{jsxref("String")}} ou {{jsxref("Object.prototype.toString","toString()")}} depuis {{jsxref("Object")}}. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
 
 ### Les propriétés ajoutées, modifiées ou supprimées
 
@@ -55,7 +64,7 @@ Si on souhaite ne parcourir que les propriétés propres d'un objet et pas celle
 La boucle `for...in` qui suit utilise parcourt l'objet `obj` et ses propriétés énumérables qui ne sont pas des symboles en fournissant la chaîne de caractères qui décrit le nom de la propriété et sa valeur.
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -70,7 +79,7 @@ for (var prop in obj) {
 La fonction qui suit utilise {{jsxref("Object.hasOwnProperty", "hasOwnProperty()")}} pour ne pas afficher les propriétés héritées :
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function TriangleCouleur() {
   this.couleur = "rouge";
@@ -81,7 +90,7 @@ TriangleCouleur.prototype = triangle;
 var obj = new TriangleCouleur();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log(`obj.${prop} = ${obj[prop]}`);
   }
 }
@@ -92,40 +101,17 @@ for (var prop in obj) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                                 | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for_in")}}
-
-### Expressions avec initialisateur
-
-Avant SpiderMonkey 40 {{geckoRelease(40)}}, il était possible d'utiliser un initialisateur (`i=0`) dans un boucle `for...in` :
-
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
-  console.log(obj[i]);
-}
-// 1
-// 2
-// 3
-```
-
-Ce comportement non-standard a été retiré avec la version 40. Cela provoquera désormais une exception {{jsxref("SyntaxError")}} ("_[for-in loop head declarations may not have initializers](/fr/docs/Web/JavaScript/Reference/Erreurs/Invalid_for-in_initializer)_") en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (cf. {{bug(748550)}} et {{bug(1164741)}}).
-
-Les autres moteurs, tels que v8 (Chrome), Chakra (IE/Edge) et JSC (WebKit/Safari) recherchent également comment retirer ce comportement non standard.
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Instructions/for...of","for...of")}} : une instruction semblable qui permet d'itérer sur les valeurs des propriétés
 - {{jsxref("Instructions/for","for")}}
-- [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}

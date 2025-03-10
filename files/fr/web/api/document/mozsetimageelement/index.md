@@ -1,24 +1,17 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
-tags:
-  - API
-  - Arrière-plan
-  - CSS
-  - DOM
-  - Image
-  - Méthodes
-translation_of: Web/API/Document/mozSetImageElement
 ---
-{{ ApiRef("DOM") }}
 
-{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}
+{{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 Change l'élément utilisé comme arrière-plan CSS par un arrière-plan avec un ID d'élément d'arrière-plan donné.
 
 ## Syntaxe
 
-    document.mozSetImageElement(imageElementId, imageElement);
+```js
+document.mozSetImageElement(imageElementId, imageElement);
+```
 
 ### Paramètres
 
@@ -29,7 +22,7 @@ Change l'élément utilisé comme arrière-plan CSS par un arrière-plan avec un
 
 Cet exemple change l'arrière-plan d'un bloc {{ HTMLElement("div") }} chaque fois que l'utilisateur clique sur le bloc.
 
-[Vue de cet exemple en direct](/samples/domref/mozSetImageElement.html).
+[Vue de cet exemple en direct](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
 ```html
 <style type="text/css">
@@ -43,7 +36,7 @@ Cet exemple change l'arrière-plan d'un bloc {{ HTMLElement("div") }} chaque foi
 </style>
 ```
 
-Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
+Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
 
 ```js
 var c = 0x00;
@@ -52,7 +45,7 @@ function clicked() {
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  var ctx = canvas.getContext('2d');
+  var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#" + c.toString(16) + "0000";
   ctx.fillRect(25, 25, 75, 75);
 

@@ -1,14 +1,10 @@
 ---
 title: Delta
 slug: Glossary/Delta
-tags:
-  - Delta
-  - Glossaire
-  - Valeur
-  - difference
-translation_of: Glossary/Delta
-original_slug: Glossaire/Delta
 ---
+
+{{GlossarySidebar}}
+
 Le terme **delta** fait référence à la différence entre deux valeurs ou états. Le nom provient de la lettre grecque Δ (delta), qui équivaut à la lettre _D_ dans l'alphabet romain. _Delta_ se réfère simplement à l'utilisation de la lettre Δ comme raccourci pour la _différence_.
 
 Le terme _delta_ est couramment utilisé pour communiquer les changements de vitesse, de position ou d'accélération d'un objet physique ou virtuel. Il est également utilisé pour décrire les changements de volume ou de fréquence des ondes sonores.
@@ -31,4 +27,4 @@ let newX = oldX + deltaX;
 
 ### Référence technique
 
-- Les événements de la molette de la souris ({{domxref("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, et {{domxref("WheelEvent.deltaZ", "deltaZ")}}, par exemple.
+- Les événements de la molette de la souris ({{domxref("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, et {{domxref("WheelEvent.deltaZ", "deltaZ")}}, par exemple.

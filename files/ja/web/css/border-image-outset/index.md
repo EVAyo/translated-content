@@ -1,15 +1,10 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-image-outset
-translation_of: Web/CSS/border-image-outset
+l10n:
+  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
+
 {{CSSRef}}
 
 **`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)が境界ボックスからはみ出す幅を設定します。
@@ -40,15 +35,16 @@ border-image-outset: 7px 12px 14px 5px;
 border-image-outset: inherit;
 border-image-outset: initial;
 border-image-outset: revert;
+border-image-outset: revert-layer;
 border-image-outset: unset;
 ```
 
 `border-image-outset` プロパティは、1 つから 4 つの値を使用して指定することができます。それぞれの値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;number&gt;")}} です。負の値は無効であり、指定すると `border-image-outset` の宣言が無効になります。
 
-1.  値が **1 つ**指定された場合は、**全四辺**に適用されます。
-2.  値が **2 つ**指定された場合は、1 つ目が**上下**に、2 つ目が**左右**に適用されます。
-3.  値が **3 つ**指定された場合は、1 つ目が**上**に、2 つ目が**左右**に、3 つ目が**下**に適用されます。
-4.  値が **4 つ**指定された場合は、**上**、**右**、**下**、**左**の順 (時計回り) で適用されます。
+1. 値が **1 つ**指定された場合は、**全四辺**に適用されます。
+2. 値が **2 つ**指定された場合は、1 つ目が**上下**に、2 つ目が**左右**に適用されます。
+3. 値が **3 つ**指定された場合は、1 つ目が**上**に、2 つ目が**左右**に、3 つ目が**下**に適用されます。
+4. 値が **4 つ**指定された場合は、**上**、**右**、**下**、**左**の順 (時計回り) で適用されます。
 
 ### 値
 
@@ -67,23 +63,23 @@ border-image-outset: unset;
 
 ## 例
 
-<h3 id="Outsetting_a_border_image">境界画像をはみ出させる</h3>
+### 境界画像をはみ出させる
 
 #### HTML
 
-```html
+```html-nolint live-sample___outsetting_a_border_image
 <div id="outset">この要素の境界画像ははみ出しています。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___outsetting_a_border_image
 #outset {
   width: 10rem;
   background: #cef;
   border: 1.4rem solid;
   border-image: radial-gradient(#ff2, #55f) 40;
-  border-image-outset: 1.5;  /* 1.5 × 1.4rem = 2.1rem */
+  border-image-outset: 1.5; /* 1.5 × 1.4rem = 2.1rem */
   margin: 2.1rem;
 }
 ```
@@ -102,5 +98,6 @@ border-image-outset: unset;
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)（MDN ブログ、2023）

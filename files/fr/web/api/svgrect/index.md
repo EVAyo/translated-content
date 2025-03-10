@@ -1,15 +1,15 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-tags:
-  - Rectangle
-translation_of: Web/API/SVGRect
 ---
+
+{{APIRef("SVG")}}
+
 ## Interface SVG rect
 
 `SVGRect` représente la géométrie rectangulaire. Les rectangles consistent en une paire de coordonnées (x,y) correspondant à une valeur X minimale, une valeur Y minimale, et une largeur et hauteur, lesquelles sont habituellement positives.
 
-Un objet `SVGRect `peut être marqué en lecture-seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
+Un objet `SVGRect` peut être marqué en lecture seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
 
 ### Vue d'ensemble de l'interface
 
@@ -62,11 +62,8 @@ L'interface `SVGRect` ne fournit pas de méthode spécifique.
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                       | Commentaire                                               |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------- |
-| {{SpecName("Geometry Interfaces", "#DOMRect", "DOMRect")}}         | {{Spec2("Geometry Interfaces")}} | Changement de SVGRect en tant qu'ancien alias de DOMRect. |
-| {{SpecName("SVG1.1", "types.html#InterfaceSVGRect", "SVGRect")}} | {{Spec2("SVG1.1")}}                     | Définition initiale                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGRect")}}
+{{Compat}}

@@ -1,12 +1,11 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-translation_of: Web/CSS/aspect-ratio
-browser-compat: css.properties.aspect-ratio
 ---
+
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** définit un **ratio d'affichage préférentiel** pour la boîte, qui sera utilisé dans le calcul des tailles automatiques et pour d'autres fonctions de mise en page.
+La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** définit un **ratio d'affichage préférentiel** pour la boîte, qui sera utilisé dans le calcul des tailles automatiques et pour d'autres fonctions de mise en page.
 
 ```css
 aspect-ratio: 1 / 1;
@@ -44,12 +43,19 @@ aspect-ratio: 16 / 9;
 
 ## Correspondance entre largeur et hauteur avec aspect-ratio
 
-Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/Replaced_element) et à d'autres éléments liés qui acceptent les attributs `width` et `height`. Cela se passe dans la feuille de styles interne du navigateur.
+Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/Replaced_element) et à d'autres éléments liés qui acceptent les attributs `width` et `height`. Cela se passe dans la feuille de styles interne du navigateur.
 
-Sur Firefox, la règle de la feuille de styles interne ressemble à cela :
+Sur Firefox, la règle de la feuille de styles interne ressemble à cela&nbsp;:
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```
@@ -66,5 +72,5 @@ Vous pouvez en savoir plus sur cette fonctionnalité dans l'article [Setting Hei
 
 ## Voir aussi
 
-- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Web/Media/images/aspect_ratio_mapping)
+- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Learn/Performance/Multimedia)
 - [Designing an aspect ratio unit for CSS (en anglais)](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)

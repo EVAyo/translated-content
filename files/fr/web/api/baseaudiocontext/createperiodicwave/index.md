@@ -1,24 +1,17 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Méthode
-  - Web Audio API
-  - createPeriodicWave
-translation_of: Web/API/BaseAudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
-La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une onde sinusoïdale périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
+La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une forme d'onde périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
 
 ## Syntaxe
 
-    var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```js
+var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```
 
 ### Retour
 
@@ -36,7 +29,8 @@ Un {{domxref("PeriodicWave")}}.
 
     - `disableNormalization`: si réglé à `true`, la normalisation est désactivée pour l'onde périodique. Sa valeur par défaut est `false`.
 
-> **Note :** Si normalisée, l'onde résultante aura une valeur absolue de sommet égale à 1.
+> [!NOTE]
+> Si normalisée, l'onde résultante aura une valeur absolue de sommet égale à 1.
 
 ## Exemple
 
@@ -53,7 +47,9 @@ imag[0] = 0;
 réel[1] = 1;
 imag[1] = 0;
 
-var onde = contexteAudio.createPeriodicWave(réel, imag, {disableNormalization: true});
+var onde = contexteAudio.createPeriodicWave(réel, imag, {
+  disableNormalization: true,
+});
 
 oscillateur.setPeriodicWave(wave);
 
@@ -69,18 +65,16 @@ Ici, nous créons une `PeriodicWave` avec deux valeurs. La première est le déc
 
 La seconde valeur et les suivantes sont les composantes de sinus et de cosinus. Vous pouvez les voir comme le résultat d'une transformation de Fourier, où l'on obtient les valeurs du domaine de fréquence à partir de la valeur du domaine de temps. Ici, avec `createPeriodicWave()`, vous spécifiez les fréquences, et le navigateur calcule une transformation inverse de Fourier pour obtenir un tampon de domaine de temps pour la fréquence de l'oscillateur. Ici, nous définissons seulement un composant au volume maximal (1.0) sur l'harmonique fondamentale, ainsi on obtient une courbe sinusoïdale.
 
-Les coefficients de la transformation de Fourier doivent être données dans un ordre _croissant_ (c'est-à-dire <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i}    </annotation></semantics></math> etc) et peuvent être positifs ou négatifs. Une méthode simple pour obtenir manuellement de tels coefficients (bien qu'elle ne soit la meilleure) est d'utiliser une calculateur graphique.
+Les coefficients de la transformation de Fourier doivent être données dans un ordre _croissant_ (c'est-à-dire <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i}</annotation></semantics></math> etc) et peuvent être positifs ou négatifs. Une méthode simple pour obtenir manuellement de tels coefficients (bien qu'elle ne soit la meilleure) est d'utiliser une calculateur graphique.
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createperiodicwave', 'createPeriodicWave')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

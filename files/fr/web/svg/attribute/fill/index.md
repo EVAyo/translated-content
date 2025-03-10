@@ -1,11 +1,8 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
@@ -17,30 +14,37 @@ Pour les animations, il s'applique à cinq éléments: {{SVGElement('animate')}}
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Remplir avec une simple couleur -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
+  <!-- Remplir avec une simple couleur -->
+  <circle cx="50" cy="50" r="40" fill="pink" />
 
-  <!-- Remplir avec un dégradé -->
-  <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
-  </defs>
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+  <!-- Remplir avec un dégradé -->
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="0%" stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
-  <!-- Définit l'état final d'un cercle animé -->
-  <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
-  </circle>
+  <!-- Définit l'état final d'un cercle animé -->
+  <circle cx="250" cy="50" r="20">
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
+  </circle>
 </svg>
 ```
 
@@ -481,15 +485,11 @@ Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui défin
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire                                                                        |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}} | {{Spec2("SVG Animations 2")}} | Définition pour les animations.                                                    |
-| {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}         | {{Spec2("SVG2")}}                 | Définition pour les formes et le texte. Ajoute `context-fill` et `context-stroke`. |
-| {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les animations.                                           |
-| {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les formes et le texte.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.fill")}}
+{{Compat}}
 
-> **Note :** Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
+> [!NOTE]
+> Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.

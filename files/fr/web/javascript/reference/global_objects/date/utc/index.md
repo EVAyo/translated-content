@@ -1,23 +1,30 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/UTC
 ---
+
 {{JSRef}}
 
 La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du constructeur {{jsxref("Date")}} et renvoie le nombre de millièmes de seconde depuis le 1er janvier 1970, 00:00:00, temps universel. Autrement dit, elle renvoie la date en UTC.
 
-{{EmbedInteractiveExample("pages/js/date-utc.html")}}
+{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+
+```js interactive-example
+const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+
+console.log(utcDate1.toUTCString());
+// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+
+console.log(utcDate2.toUTCString());
+// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+```
 
 ## Syntaxe
 
-    Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```js
+Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```
 
 ## Paramètres
 
@@ -27,7 +34,8 @@ La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du const
 
   - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
 
-    > **Note :** Cet argument est optionnel depuis ECMAScript 2017.
+    > [!NOTE]
+    > Cet argument est optionnel depuis ECMAScript 2017.
 
 - `jour`{{optional_inline}}
   - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.
@@ -48,7 +56,7 @@ Un nombre représentant le nombre de millisecondes écoulées entre la date indi
 
 La méthode `UTC` prend des paramètres de date et d'heure séparés par des virgules et renvoie le nombre de millièmes de seconde entre le 1er janvier 1970, 00:00:00, temps universel et la date et l'heure spécifiées.
 
-Il faut spécifier l'année entière pour le premier paramètre ; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année) ; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
+Il faut spécifier l'année entière pour le premier paramètre&nbsp;; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année)&nbsp;; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
 
 La méthode `UTC` diffère du constructeur {{jsxref("Date")}} pour deux raisons :
 
@@ -63,7 +71,7 @@ Comme `UTC` est une méthode statique de `Date`, on l'utilise toujours sous la f
 
 ### Utiliser `Date.UTC()`
 
-L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale :
+L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale&nbsp;:
 
 ```js
 var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
@@ -71,36 +79,11 @@ var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                                |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}} | {{Spec2('ESDraft')}} | Le paramètre pour le mois est devenu optionnel avec ES2017. |
-| {{SpecName('ES6', '#sec-date.utc', 'Date.UTC')}}     | {{Spec2('ES6')}}         |                                                             |
-| {{SpecName('ES5.1', '#sec-15.9.4.3', 'Date.UTC')}} | {{Spec2('ES5.1')}}     |                                                             |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.UTC")}}
-
-## Notes de compatibilité
-
-### Utiliser `Date.UTC` avec moins de deux arguments
-
-Lorsqu'on fournit moins de deux arguments à `Date.UTC`, {{jsxref("NaN")}} sera renvoyé. Ce comportement a été spécifié dans ECMAScript 2017 et les moteurs qui n'obéissaient pas à cette règle on été mis à jour (cf. {{bug(1050755)}}, [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
-
-```js
-Date.UTC();
-Date.UTC(1);
-
-// Safari: NaN
-// Chrome/Opera/V8: NaN
-
-// Firefox <54: non-NaN
-// Firefox 54+: NaN
-
-// IE: non-NaN
-// Edge: NaN
-```
+{{Compat}}
 
 ## Voir aussi
 

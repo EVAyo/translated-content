@@ -1,12 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Element/ruby).
@@ -19,7 +15,7 @@ La propriété `text-transform` gère les différences liées aux langues, par e
 - En allemand (de), le `ß` devient `SS` en majuscule.
 - En néerlandais (nl), le digraphe `ij` devient `IJ`, y compris avec `text-transform: capitalize` qui ne met que la première lettre de chaque mot en majuscule.
 - En grec (el), les voyelles perdent leur accent lorsque tout le mot est écrit en capitales (`ά`/`Α`) à l'exception du eta disjonctif (`ή`/`Ή`). Les diphtongues avec un accent sur la première voyelle perde l'accent et récupère un tréma sur la seconde voyelle (`άι`/`ΑΪ`). La lettre sigma a deux formes minuscules : `σ` et `ς`. `ς` est utilisée uniquement lorsque c'est la dernière lettre du mot. Lorsque l'agent utilisateur applique `text-transform: lowercase` à un sigma majuscule (`Σ`), il doit choisir l'une des deux formes selon le contexte.
-- En gaëlique (ga), une lettre qui préfixe un mot doit rester en minuscule lorsqu'on capitalise toutes les lettres. Ainsi, en appliquant `text-transform: uppercase` à `ar aon tslí`, on obtiendra `AR AON tSLÍ` et non `AR AON TSLÍ`. Dans certains cas, un trait d'union peut être retiré lors du passage en majuscules : `an t-uisce` deviendra `AN tUISCE `(le trait-d'union sera bien réinséré avec `text-transform: lowercase`)
+- En gaëlique (ga), une lettre qui préfixe un mot doit rester en minuscule lorsqu'on capitalise toutes les lettres. Ainsi, en appliquant `text-transform: uppercase` à `ar aon tslí`, on obtiendra `AR AON tSLÍ` et non `AR AON TSLÍ`. Dans certains cas, un trait d'union peut être retiré lors du passage en majuscules : `an t-uisce` deviendra `AN tUISCE` (le trait-d'union sera bien réinséré avec `text-transform: lowercase`)
 
 La langue d'un document HTML est définie par l'attribut XML `xml:lang`, qui a la priorité sur l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang).
 
@@ -48,7 +44,8 @@ text-transform: unset;
 
   - : En utilisant ce mot-clé, la première lettre de chaque mot sera affichée en capitale. Les autres caractères ne seront pas modifiés et conserveront ainsi la forme originale, contenue dans le texte de l'élément. Ici, une lettre peut être n'importe quel caractère Unicode qui fait partie des catégories génériques Lettre. Cela exclue donc les symboles de ponctuations qui peuvent être utilisés en début de mot.
 
-    > **Note :** Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et \_ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.
+    > [!NOTE]
+    > Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et \_ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.
 
 - `uppercase`
   - : En utilisant ce mot-clé, tous les caractères seront écrits en capitales.
@@ -61,9 +58,13 @@ text-transform: unset;
 - `full-size-kana`
   - : Cette valeur est généralement utilisée pour [les annotations Ruby](/fr/docs/Web/HTML/Element/ruby). Ce mot-clé convertit les caractères Kana de petite taille en leur équivalent de grande taille. Cela permet de compenser les problèmes de lisibilité des tailles de police généralement utilisées pour le Ruby.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -134,17 +135,11 @@ De grandes portions de texte utilisant `text-transform` avec la valeur `uppercas
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS3 Text')}} | Par rapport à {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, la spécification s'étend aux caractères Unicode des catégories générales Nombre et Lettre. Le comportement de `capitalize` est modifié pour ignorer les éventuels symboles ou caractères de ponctuations utilisés. Les mots-clés `full-width` et `full-size-kana` sont ajoutés afin de pouvoir mélanger harmonieusement les caractères alphabétiques et les caractères idéographiques. |
-| {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}} | {{Spec2('CSS2.1')}}     | Par rapport à {{SpecName('CSS1', '#text-transform', 'text-transform')}}, étend la spécifications aux lettres non latines et aux scripts bicaméraux.                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('CSS1', '#text-transform', 'text-transform')}}         | {{Spec2('CSS1')}}     | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Voir aussi
 

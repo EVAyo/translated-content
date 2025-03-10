@@ -1,16 +1,8 @@
 ---
 title: DOMQuad
 slug: Web/API/DOMQuad
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Interfaces
-  - Quadrilatère
-  - dimensions
-translation_of: Web/API/DOMQuad
 ---
+
 {{SeeCompatTable}}{{APIRef("Geometry Interfaces")}}
 
 Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quadrilatère arbitraire. Renvoyer des `DOMQuad` permet à `getBoxQuads()` de retourner des informations précises, même lorsque des transformations 2D ou 3D arbitraires sont présentes. Il possède un attribut `bounds` pratique qui retourne un `DOMRectReadOnly` pour les cas où vous voulez juste un rectangle de délimitation aligné sur l'axe.
@@ -23,7 +15,7 @@ Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quad
 ## Propriétés
 
 - p1,p2,p3,p4 {{readonlyinline}}
-  - : sont des objets {{domxref("DOMPoint")}} pour chacun des 4 coins de l'objet` DOMQuad`.
+  - : Des objets [`DOMPoint`](/fr/docs/Web/API/DOMPoint) pour chacun des 4 coins de l'objet `DOMQuad`.
 
 ## Méthode
 
@@ -38,10 +30,8 @@ Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quad
 
 ## Spécifications
 
-| Spécification                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces','#DOMQuad','DOMQuad')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMQuad")}}
+{{Compat}}

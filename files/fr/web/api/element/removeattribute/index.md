@@ -1,41 +1,54 @@
 ---
-title: element.removeAttribute
+title: "Element : méthode removeAttribute()"
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
-  - Suppression
-translation_of: Web/API/Element/removeAttribute
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
-{{ APIRef("DOM") }}
 
-`removeAttribute` supprime un attribut de l'élément spécifié.
+{{APIRef("DOM")}}
+
+La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut ayant le nom indiqué de l'élément.
 
 ## Syntaxe
 
-    element.removeAttribute(nomAttribut);
+```js-nolint
+removeAttribute(attrName)
+```
 
-- `nomAttribut` est une chaîne de caractères représentant le nom de l'attribut à enlever de l'_element_ .
+### Paramètres
+
+- `nomAttribut`
+  - : Une chaîne de caractères qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Notes d'utilisation
+
+`removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` (que ce soit directement ou en appelant [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute). De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
 
 ## Exemple
 
-    // avant : <div id="div1" align="left" width="200">
-    document.getElementById("div1").removeAttribute("align");
-    // maintenant : <div id="div1" width="200">
+```js
+// Si initialement on a : <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
+// Après on aura : <div id="div1" width="200px">
+```
 
-## Notes
+## Spécifications
 
-Il vaut mieux utiliser `removeAttribute` plutôt que de définir la valeur de l'attribut à `null` avec [setAttribute](fr/DOM/element.setAttribute).
+{{Specifications}}
 
-Tenter d'effacer un attribut que l'élément ne possède pas ne provoque aucune exception.
+## Compatibilité des navigateurs
 
-`removeAttribute` ne renvoie rien, donc vous ne pouvez supprimer plusieurs attributs par enchaînement de cette méthode.
+{{Compat}}
 
-{{ DOMAttributeMethods() }}
+## Voir aussi
 
-## Spécification
-
-- [DOM Level 2 Core : removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9) (non normative)
+- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
+- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
+- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
+- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)

@@ -1,34 +1,39 @@
 ---
-title: '<bdi> : l''élément d''isolation bidirectionnelle'
+title: "<bdi> : l'élément d'isolation bidirectionnelle"
 slug: Web/HTML/Element/bdi
-tags:
-  - BDI
-  - BiDi
-  - Directionality
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Internationalization
-  - Left-to-Right
-  - Reference
-  - Right-to-left
-  - Text
-  - Web
-  - direction
-  - i18n
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdi
-browser-compat: html.elements.bdi
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<bdi>`** (ou élément d'isolation de texte bidirectionnel) isole une portée (_span_) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).
 
-{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>World wrestling championships</h1>
+
+<ul>
+  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+  <li><span class="name">سما</span>: 3rd place</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdi {
+}
+
+.name {
+  color: red;
+}
+```
 
 Un texte bidirectionnel est un texte qui contient à la fois des suites de caractères à lire de gauche à droite (LTR en anglais pour _left-to-right_) et des suites de caractères à lire de droite à gauche (RTL en anglais pour _right-to-left_), par exemple une citation en arabe dans un texte en néerlandais. Les navigateurs implémentent [l'algorithme de bidirection Unicode (W3C)(document en anglais)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) afin de gérer ces cas. Dans cet algorithme, les caractères ont une direction implicite : les caractères latins sont considérés comme allant de gauche à droite et les caractères arabes comme allant de droite à gauche par exemple. D'autres caractères, comme les espaces ou certains caractères de ponctuation sont considérés comme neutres et leur direction est fournie par les caractères environnants.
 
@@ -53,7 +58,7 @@ Si `TEXTE-INJECTÉ` est un texte écrit de gauche à droite, aucun problème. En
 
 Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
 
-Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)` : isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
+Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
 
 Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sémantique portée sera moindre.
 

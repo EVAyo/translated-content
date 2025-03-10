@@ -1,24 +1,32 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-{{EmbedInteractiveExample("pages/js/atomics-add.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 + 2 = 9
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 9
+```
 
 ## 構文
 
 ```js
-Atomics.add(typedArray, index, value)
+Atomics.add(typedArray, index, value);
 ```
 
 ### 引数

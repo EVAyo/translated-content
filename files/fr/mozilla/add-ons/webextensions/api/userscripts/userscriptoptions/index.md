@@ -1,18 +1,8 @@
 ---
 title: UserScripts.UserScriptOptions
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Guide
-  - Intermediate
-  - NeedsExample
-  - UserScriptOptions
-  - WebExtensions
-  - userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 ---
+
 {{AddonSidebar}}
 
 L'objet UserScriptOptions représente les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des options contentScript prises en charge par browser.contentScripts.register. Les différences sont les suivantes :
@@ -29,7 +19,7 @@ L'objet UserScriptOptions a les propriétés suivantes :
 - `excludeMatches`{{optional_inline}}
   - : Même chose que `exclude_matches` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
 - `includeGlobs`{{optional_inline}}
-  - : Même chose que `include_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
+  - : Même chose que `include_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
 - `js`{{optional_inline}}
   - : Un ensemble d'objets. Chaque objet a soit une propriété nommée `file`, qui est une URL commençant à l'extension manifest.json et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est un code JavaScript à enregistrer.
 - `matchAboutBlank`{{optional_inline}}

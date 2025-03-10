@@ -1,20 +1,17 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
-original_slug: Web/JavaScript/Reference/Erreurs/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Invalid character (Edge)
-    SyntaxError: illegal character (Firefox)
-    SyntaxError: Invalid or unexpected token (Chrome)
+```
+SyntaxError: Invalid character (Edge)
+SyntaxError: illegal character (Firefox)
+SyntaxError: Invalid or unexpected token (Chrome)
+```
 
 ## Type d'erreur
 
@@ -22,7 +19,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Illegal_character
 
 ## Quel est le problème ?
 
-Dans le code, il y a un élément de la syntaxe qui n'est pas à la bonne place. Pour détecter les erreurs de ce type, vous pouvez utiliser un éditeur de texte qui prend en charge la coloration syntaxique et qui met en évidence les caractères problématiques (par exemple si on a utilisé un tiret (` – `) au lieu d'un moins ( - ) ou des guillemets anglais (` “ `) à la place de doubles quotes ( " ).
+Dans le code, il y a un élément de la syntaxe qui n'est pas à la bonne place. Pour détecter les erreurs de ce type, vous pouvez utiliser un éditeur de texte qui prend en charge la coloration syntaxique et qui met en évidence les caractères problématiques (par exemple si on a utilisé un tiret (`–`) au lieu d'un moins ( - ) ou des guillemets anglais (`“`) à la place de doubles quotes ( " ).
 
 ## Exemples
 
@@ -66,7 +63,7 @@ var couleurs = ['#000', #333', '#666'];
 Dans ce cas, il suffit de rajouter la quote pour `'#333'`.
 
 ```js example-good
-var couleurs = ['#000', '#333', '#666'];
+var couleurs = ["#000", "#333", "#666"];
 ```
 
 ### Caractères cachés
@@ -74,16 +71,16 @@ var couleurs = ['#000', '#333', '#666'];
 Lorsque vous copiez/collez du code depuis des sources externes, celles-ci peuvent contenir des caractères invalides difficiles à discerner.
 
 ```js example-bad
-var toto = 'truc';​
+var toto = "truc";
 // SyntaxError: illegal character
 ```
 
 Lorsqu'on inspecte ce code grâce à un éditeur de texte (par exemple Vim), on peut voir qu'il y en fait un [espace sans chasse (ZWSP) (U+200B)](https://fr.wikipedia.org/wiki/Espace_sans_chasse).
 
 ```js
-var toto = 'truc';​<200b>
+var toto = 'truc';<200b>
 ```
 
 ## Voir aussi
 
-- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
+- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)

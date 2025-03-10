@@ -1,17 +1,13 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/display-mode
 ---
+
 {{CSSRef}}
 
 **`display-mode`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer différentes règles CSS selon le mode d'affichage de l'application. On pourra utiliser cette caractéristique afin qu'un utilisateur ait une expérience similaire selon qu'il lance le site depuis une URL ou depuis une icône sur un bureau.
 
-Cette caractéristique correspond à la propriété [`display` ](/fr/docs/Web/Manifest#display)du manifeste de l'application web. Les deux s'appliquent au contexte de navigation de plus haut niveau ainsi qu'aux contextes fils. Cette requête s'appliquera dans tous les cas (qu'un manifeste d'application soit présent ou non).
+Cette caractéristique correspond à la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste de l'application web. Les deux s'appliquent au contexte de navigation de plus haut niveau ainsi qu'aux contextes fils. Cette requête s'appliquera dans tous les cas (qu'un manifeste d'application soit présent ou non).
 
 ## Syntaxe
 
@@ -37,10 +33,8 @@ La caractéristique `display-mode` est définie avec un mot-clé parmi ceux du t
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.display-mode")}}
+{{Compat}}

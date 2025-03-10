@@ -1,15 +1,14 @@
 ---
 title: audioprocess
 slug: Web/API/ScriptProcessorNode/audioprocess_event
-translation_of: Web/API/ScriptProcessorNode/audioprocess_event
-original_slug: Web/Events/audioprocess
 ---
+
+{{APIRef("Web Audio API")}}
+
 L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une API Web audio {{domxref("ScriptProcessorNode")}} est prêt à être traité.
 
 ## Informations générales
 
-- Spécification
-  - : {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}}
 - Interface
   - : {{domxref("AudioProcessingEvent")}}
 - Propagation
@@ -71,8 +70,8 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
           nombre de canaux est défini par le paramètre
           <code><em>numberOfInputChannels</em> de la méthode </code
           >{{domxref("AudioContext.createScriptProcessor()")}}.
-          Noter que <code>le<em> AudioBuffer</em></code
-          ><code> retourné</code><em><code> </code></em>est seulement valide
+          Noter que le <em><code>AudioBuffer</em></code
+          > retourné est seulement valide
           dans la portée de la fonction <em><code>onaudioprocess.</code></em>
         </p>
       </td>
@@ -97,14 +96,12 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.ScriptProcessorNode.audioprocess_event")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Web Audio API](/fr/docs/Web_Audio_API)
+- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)

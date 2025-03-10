@@ -1,24 +1,29 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/unshift
 ---
+
 {{JSRef}}
 
 La méthode **`unshift()`** ajoute un ou plusieurs éléments au début d'un tableau et renvoie la nouvelle longueur du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## Syntaxe
 
-    arr.unshift([élém1[, ...[, élémN]]])
+```js
+arr.unshift([élém1[, ...[, élémN]]])
+```
 
 ### Paramètres
 
@@ -65,7 +70,7 @@ arr.unshift(0); // renvoie 3, la nouvelle longueur du tableau
 arr.unshift(-2, -1); // = 5
 // arr est [-2, -1, 0, 1, 2]
 
-arr.unshift( [-3] ); // 6
+arr.unshift([-3]); // 6
 // arr est [[-3], -2, -1, 0, 1, 2]
 
 arr.unshift([-7, -6], [-5]); // 8
@@ -74,16 +79,11 @@ arr.unshift([-7, -6], [-5]); // 8
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## Voir aussi
 

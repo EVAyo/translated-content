@@ -1,15 +1,11 @@
 ---
 title: Firefox 1.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/1.5
-tags:
-  - Firefox
-  - Firefox 1.5
-translation_of: Mozilla/Firefox/Releases/1.5
-original_slug: Mozilla/Firefox/Versions/1.5
 ---
+
 {{FirefoxSidebar}}
 
-Firefox 1.5, basé sur le moteur [Gecko](/fr/Gecko) 1.8, améliore son support des standards déjà de premier ordre et fournit de nouvelles opportunités de créer la prochaine génération d'applications Web. Firefox 1.5 propose un support amélioré de CSS2 et CSS3, des API pour des graphiques 2D scriptables et programmables grâce à [SVG](/fr/SVG) 1.1 et `<canvas>`, les évènements [XForms](/fr/XForms) et XML, ainsi que de nombreuses améliorations du DHTML, du JavaScript et du DOM.
+Firefox 1.5, basé sur le moteur [Gecko](/fr/Gecko) 1.8, améliore son support des standards déjà de premier ordre et fournit de nouvelles opportunités de créer la prochaine génération d'applications Web. Firefox 1.5 propose un support amélioré de CSS2 et CSS3, des API pour des graphiques 2D scriptables et programmables grâce à [SVG](/fr/docs/Web/SVG) 1.1 et `<canvas>`, les évènements [XForms](/fr/XForms) et XML, ainsi que de nombreuses améliorations du DHTML, du JavaScript et du DOM.
 
 ## Outils pour développeurs
 
@@ -20,11 +16,11 @@ Plusieurs outils et extensions sont disponibles pour aider les développeurs à 
 - L'affichage du code source d'une page avec coloration syntaxique et recherche intégrée.
 - Des [extensions](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) comme [Firebug](http://www.joehewitt.com/software/firebug/), [la barre d'outils Web Developer](</fr/Extension_Firefox_Web_Developer_(externe)>), [Live HTTP Headers](</fr/Live_HTTP_Headers_(externe)>), [un validateur HTML](</fr/Validateur_HTML_en_français_(externe)>), [une extension pour les développeurs d'extensions](</fr/Extension_Developer's_Extension_(externe)>) et bien d'autres.
 
-**Note :** Certaines extensions ne sont pas encore supportées par Firefox 1.5 et seront automatiquement désactivées.
+**Note&nbsp;:** Certaines extensions ne sont pas encore supportées par Firefox 1.5 et seront automatiquement désactivées.
 
 ## Fonctionnalités
 
-Voici certaines des nouvelles fonctionnalités de Firefox 1.5 :
+Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 
 ### Site Web et développeurs d'applications
 
@@ -83,7 +79,7 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5 :
 - **Navigation plus rapide** avec une performance accrue des boutons permettant de reculer ou d'avancer d'une page.
 - **Réorganisation des onglets par glisser-déposer.**
 - **Le dictionnaire MediaDICO a été ajouté à la liste des moteurs de recherche**.
-- **Une meilleure prise en main** avec des pages d'erreur descriptives, un menu d'options redessiné, la découverte automatique des fils RSS et un « mode sans échec » plus facile à utiliser.
+- **Une meilleure prise en main** avec des pages d'erreur descriptives, un menu d'options redessiné, la découverte automatique des fils RSS et un «&nbsp;mode sans échec&nbsp;» plus facile à utiliser.
 - **Meilleur support de l'accessibilité**, notamment pour les pages DHTML.
 - **Assistant pour les sites Web non fonctionnels** pour rapporter les sites Web qui ne fonctionnent pas avec Firefox.
 - **Meilleur support de Mac OS X** (10.2 et supérieur), avec la migration des profils de Safari et d'Internet Explorer pour Mac.
@@ -96,21 +92,21 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5 :
 
 ### Support des standards Web ouverts
 
-Le support des standards Web de Firefox garde une longueur d'avance avec des implémentations fonctionnelles et multiplateformes pour :
+Le support des standards Web de Firefox garde une longueur d'avance avec des implémentations fonctionnelles et multiplateformes pour&nbsp;:
 
-- Hypertext Markup Language ([HTML](/fr/HTML)) et Extensible Hypertext Markup Language ([XHTML](/fr/XHTML)): [HTML 4.01](http://www.w3.org/TR/html401/) et [XHTML 1.0/1.1](http://www.w3.org/TR/xhtml1/)
-- Cascading Style Sheets ([CSS](/fr/CSS)): [CSS niveau 1](http://www.w3.org/TR/REC-CSS1), [CSS niveau 2](http://www.w3.org/TR/REC-CSS2) et quelques parties de [CSS niveau 3](http://www.w3.org/Style/CSS/current-work.html)
-- Document Object Model ([DOM](/fr/DOM)): [DOM niveau 1](http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM niveau 2](http://www.w3.org/DOM/DOMTR#dom2) et quelques parties de [DOM niveau 3](http://www.w3.org/DOM/DOMTR#dom3)
-- Mathematical Markup Language: [MathML Version 2.0](http://www.w3.org/Math/)
-- Extensible Markup Language ([XML](/fr/XML)): [XML 1.0](http://www.w3.org/TR/REC-xml), [Espaces de nommage sous XML](http://www.w3.org/TR/REC-xml-names/), [Feuilles de styles associées avec des documents XML 1.0](http://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
-- XSL Transformations ([XSLT](/fr/XSLT)): [XSLT 1.0](http://www.w3.org/TR/xslt)
-- XML Path Language ([XPath](/fr/XPath)): [XPath 1.0](http://www.w3.org/TR/xpath)
-- Resource Description Framework ([RDF](/fr/RDF)): [RDF](http://www.w3.org/RDF/)
-- Simple Object Access Protocol (SOAP): [SOAP 1.1](http://www.w3.org/TR/SOAP/)
-- [JavaScript](/fr/JavaScript) 1.6, basé sur [ECMA-262](/fr/ECMAScript), révision 3 : [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- Hypertext Markup Language ([HTML](/fr/docs/Web/HTML)) et Extensible Hypertext Markup Language ([XHTML](/fr/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) et [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
+- Cascading Style Sheets ([CSS](/fr/docs/Web/CSS)): [CSS niveau 1](https://www.w3.org/TR/REC-CSS1), [CSS niveau 2](https://www.w3.org/TR/REC-CSS2) et quelques parties de [CSS niveau 3](https://www.w3.org/Style/CSS/current-work.html)
+- Document Object Model ([DOM](/fr/docs/Web/API/Document_Object_Model)): [DOM niveau 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM niveau 2](https://www.w3.org/DOM/DOMTR#dom2) et quelques parties de [DOM niveau 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
+- Extensible Markup Language ([XML](/fr/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [Espaces de nommage sous XML](https://www.w3.org/TR/REC-xml-names/), [Feuilles de styles associées avec des documents XML 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
+- XSL Transformations ([XSLT](/fr/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
+- XML Path Language ([XPath](/fr/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
+- Resource Description Framework ([RDF](/fr/RDF)): [RDF](https://www.w3.org/RDF/)
+- Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
+- [JavaScript](/fr/docs/Web/JavaScript) 1.6, basé sur [ECMA-262](/fr/ECMAScript), révision 3&nbsp;: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 supporte un bon nombre de protocoles de transport de données (HTTP, FTP, SSL, TLS et d'autres), les caractères multi-langages (Unicode), plusieurs formats graphiques (GIF, JPEG, PNG, SVG et d'autres) et la dernière version du langage de script le plus populaire au monde, [JavaScript 1.6](/fr/Nouveautés_dans_JavaScript_1.6).
 
 ## Changements depuis Firefox 1.0
 
-De nombreux changements ont été introduits dans Firefox depuis sa première sortie le 9 novembre 2004. Firefox a progressé avec beaucoup de nouvelles fonctions et de corrections de bogues. Une [liste détaillée des modifications](http://www.squarefree.com/burningedge/releases/1.5-comprehensive.html) est disponible sur squarefree.com.
+De nombreux changements ont été introduits dans Firefox depuis sa première sortie le 9 novembre 2004. Firefox a progressé avec beaucoup de nouvelles fonctions et de corrections de bogues. Une [liste détaillée des modifications](https://www.squarefree.com/burningedge/releases/1.5-comprehensive.html) est disponible sur squarefree.com.

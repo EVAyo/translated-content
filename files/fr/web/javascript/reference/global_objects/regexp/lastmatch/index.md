@@ -1,23 +1,18 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastMatch
 ---
+
 {{JSRef}} {{non-standard_header}}
 
-La propriété non-standard **`lastMatch` **est une propriété statique en lecture seule pour les expressions rationnelles qui contient les caractères de la dernière correspondance. `RegExp.$&` est un alias pour cette propriété.
+La propriété non-standard **`lastMatch`** est une propriété statique en lecture seule pour les expressions rationnelles qui contient les caractères de la dernière correspondance. `RegExp.$&` est un alias pour cette propriété.
 
 ## Syntaxe
 
-    RegExp.lastMatch
-    RegExp['$&']
+```js
+RegExp.lastMatch;
+RegExp["$&"];
+```
 
 ## Description
 
@@ -25,7 +20,7 @@ La propriété `lastMatch` est une propriété statique, ce n'est pas une propri
 
 La valeur de la propriété `lastMatch` n'est accessible qu'en lecture seule et est modifiée à chaque fois qu'une correspondance est trouvée.
 
-Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pour accéder à la propriété (`RegExp.$&`) car le parseur attend une expression avec "&" dans ce cas, ce qui provoque une exception {{jsxref("SyntaxError")}}. Pour utiliser l'alias, on prendra donc la notation [utilisant les crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pour accéder à la propriété (`RegExp.$&`) car le parseur attend une expression avec "&" dans ce cas, ce qui provoque une exception {{jsxref("SyntaxError")}}. Pour utiliser l'alias, on prendra donc la notation [utilisant les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 
@@ -35,7 +30,7 @@ Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pou
 var re = /coucou/g;
 re.test("coucou toi!");
 RegExp.lastMatch; // "coucou"
-RegExp['$&'];     // "coucou"
+RegExp["$&"]; // "coucou"
 ```
 
 ## Spécifications
@@ -44,7 +39,7 @@ Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.lastMatch")}}
+{{Compat}}
 
 ## Voir aussi
 

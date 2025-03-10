@@ -1,12 +1,9 @@
 ---
 title: stylesheet
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/stylesheet
-original_slug: Web/XSLT/stylesheet
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:stylesheet>` (ou son équivalent `<xsl:transform>`) est l'élément le plus externe d'une feuille de style, celui qui contient tout les autres éléments.
 
@@ -16,14 +13,16 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Syntaxe
 
-    <xsl:stylesheet
-    	version=NOMBRE
-    	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    	id=NOM
-    	extension-element-prefixes=LISTE-DE-NOMS
-    	exclude-result-prefixes=LISTE-DE-NOMS>
-    		FEUILLE DE STYLE ENTIÈRE
-    </xsl:stylesheet>
+```xml
+<xsl:stylesheet
+  version=NOMBRE
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  id=NOM
+  extension-element-prefixes=LISTE-DE-NOMS
+  exclude-result-prefixes=LISTE-DE-NOMS>
+    FEUILLE DE STYLE ENTIÈRE
+</xsl:stylesheet>
+```
 
 ### Attribut obligatoire
 
@@ -32,7 +31,7 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Attributs optionnels
 
-- `id `(Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
+- `id` (Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
   - : Définit un identifiant `id` pour cette feuille de style. Cet attribut est le plus souvent utilisé lorsque la feuille de style est incorporée dans un autre document XML.
 
 <!---->
@@ -51,7 +50,7 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Définition
 
-[XSLT 1.0, section 2.2](http://www.w3.org/TR/xslt#stylesheet-element).
+[XSLT 1.0, section 2.2](https://www.w3.org/TR/xslt#stylesheet-element).
 
 ### Support Gecko
 

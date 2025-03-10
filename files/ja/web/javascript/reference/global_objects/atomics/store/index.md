@@ -1,24 +1,31 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.store
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
 
-{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.store(uint8, 0, 2));
+// Expected output: 2
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 構文
 
 ```js
-Atomics.store(typedArray, index, value)
+Atomics.store(typedArray, index, value);
 ```
 
 ### 引数

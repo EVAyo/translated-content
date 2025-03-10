@@ -1,22 +1,32 @@
 ---
 title: Intl.DisplayNames() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fournir des traductions constantes des noms de langues, régions et systèmes d'écriture.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## Syntaxe
 
-    new Intl.DisplayNames([langues[, options]])
+```js
+new Intl.DisplayNames([langues[, options]])
+```
 
 ### Paramètres
 
@@ -64,19 +74,17 @@ Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fou
 Dans son utilisation simple, sans spécifier de langue, une chaine dans la langue locale par défaut et avec les options par défaut sera retournée.
 
 ```js
-console.log((new Intl.DisplayNames()).of('US'));
+console.log(new Intl.DisplayNames().of("US"));
 // Expected output: 'us'
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Intl.DisplayNames', '#sec-intl-displaynames-constructor', 'the Intl.DisplayNames constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

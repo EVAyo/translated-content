@@ -1,29 +1,28 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
-tags:
-  - Méthode
-  - WebGL
-translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
+
 {{APIRef("WebGL")}}
 
-La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
+La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
 
 ## Syntaxe
 
-    void gl.attachShader(programme, shader);
+```js
+void gl.attachShader(programme, shader);
+```
 
 ### Paramètres
 
 - `programme`
   - : Un {{domxref("WebGLProgram")}}.
 - `shader`
-  - : Un {{domxref("WebGLShader")}} de fragment ou de sommet.
+  - : Un {{domxref("WebGLShader")}} de fragment ou de sommet.
 
 ## Exemples
 
-Le code suivant attache des shaders pré-existants à un {{domxref("WebGLProgram")}}.
+Le code suivant attache des shaders pré-existants à un {{domxref("WebGLProgram")}}.
 
 ```js
 var programme = gl.createProgram();
@@ -34,22 +33,19 @@ gl.attachShader(programme, shaderDeFragment);
 
 gl.linkProgram(programme);
 
-if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(programme);
-  throw 'Impossible de compiler le program WebGL. \n\n' + info;
+  throw "Impossible de compiler le program WebGL. \n\n" + info;
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.14.9", "attachShader")}}                             | {{Spec2('WebGL')}}             | Définition initiale. |
-| {{SpecName('OpenGL ES 2.0', "glAttachShader.xml", "glAttachShader")}} | {{Spec2('OpenGL ES 2.0')}} | Page man OpenGL.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.attachShader")}}
+{{Compat}}
 
 ## Voir aussi
 

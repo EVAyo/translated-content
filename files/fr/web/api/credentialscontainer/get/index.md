@@ -1,29 +1,24 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/CredentialsContainer/get
 ---
+
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
 
 La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("null")}}.
 
 Cette méthode collecte l'ensemble des informations d'authentification stockées dans l'objet {{domxref("CredentialsContainer")}} et qui respectent les critères indiqués (définis grâce à l'argument **`options`**). À partir de cet ensemble, l'agent utilisateur sélectionne la meilleure information d'authentification. Selon les options fournies, l'agent utilisateur pourra afficher une boîte de dialogue et demander à l'utilisateur de sélectionner la bonne information.
 
-Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé,   {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
+Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé, {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
 
-> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!NOTE]
+> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
 ## Syntaxe
 
-    var promise = CredentialsContainer.get([options])
+```js
+var promise = CredentialsContainer.get([options]);
+```
 
 ### Paramètres
 
@@ -47,11 +42,8 @@ Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxre
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.get")}}
+{{Compat}}

@@ -1,19 +1,9 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
-tags:
-  - API
-  - Add-ons
-  - Créations
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Cette méthode permet de créer une nouvelle alarme pour la session de navigation en cours. Une alarme peut se déclencher une ou plusieurs fois. Une alarme est effacée après qu'elle se soit déclenchée pour la dernière fois.
 
@@ -21,9 +11,9 @@ Cette méthode permet de créer une nouvelle alarme pour la session de navigatio
 
 ```js
 browser.alarms.create(
-  name,        // une valeur string optionnelle
-  alarmInfo    // une valeur object optionnelle
-)
+  name, // une valeur string optionnelle
+  alarmInfo, // une valeur object optionnelle
+);
 ```
 
 ### Paramètres
@@ -39,7 +29,7 @@ browser.alarms.create(
     L'objet `alarmInfo` peut contenir les propriétés suivantes :
 
     - `when`{{optional_inline}}
-      - : `double`. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en [millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix). Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir `delayInMinutes`.
+      - : `double`. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en [millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix). Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir `delayInMinutes`.
     - `delayInMinutes`{{optional_inline}}
       - : `double`. Le moment où l'alarme se déclenchera en premier exprimée de façon relative au moment où l'alarme est créée. Si cette option est utilisée, il ne faut pas fournir `when`.
     - `periodInMinutes`{{optional_inline}}
@@ -53,7 +43,7 @@ browser.alarms.create(
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -65,7 +55,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -77,16 +67,16 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.create")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

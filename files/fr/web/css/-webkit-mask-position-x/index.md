@@ -1,13 +1,8 @@
 ---
-title: '-webkit-mask-position-x'
+title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
@@ -29,7 +24,10 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 -webkit-mask-position-x: -1cm;
 
 /* Gestion de plusieurs valeurs */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* Valeurs globales */
 -webkit-mask-position-x: inherit;
@@ -42,7 +40,7 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit  de la boîte de remplissage).
+  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit de la boîte de remplissage).
 - **`left`**
   - : Un mot-clé équivalent à `0%`.
 - **`right`**
@@ -76,7 +74,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-position-x")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,9 +1,8 @@
 ---
 title: Débordements de contenu (overflow)
 slug: Learn/CSS/Building_blocks/Overflowing_content
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
-original_slug: Apprendre/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 Dans ce cours nous allons étudier un autre concept important en CSS : les **débordements** (<i lang="en">overflows</i> en anglais). Un débordement de contenu correspond à ce qui se produit lorsque le contenu à insérer dans une boîte occupe trop d'espace pour s'y insérer confortablement. Dans ce guide vous allez apprendre à gérer cela.
@@ -11,7 +10,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Connaissances élémentaires en informatique,
         <a
@@ -19,10 +18,10 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée
         <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
@@ -31,7 +30,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Comprendre le principe des débordements et comment les gérer.</td>
     </tr>
   </tbody>
@@ -59,7 +58,7 @@ Dans la mesure du possible, le CSS ne masque pas votre contenu ; le faire entra�
 
 Si vous avez défini une boîte avec des valeurs `width` ou `height`, CSS part du principe que vous savez ce que vous faites et que vous gérez le risque de débordement. En général, contraindre la dimension du bloc est problématique lorsque du texte va être mis dans une boîte, car il peut y avoir plus de texte que prévu lors de la conception du site ou que le texte peut être plus gros - par exemple si l'utilisateur a augmenté la taille de sa police.
 
-Dans les deux prochaines leçons, nous examinerons différentes façons de contrôler la taille des éléments afin de limiter le dépassement. Cependant, si vous avez besoin d'une taille fixe, vous pouvez également contrôler le comportement du trop-plein. Voyons maintenant !
+Dans les deux prochaines leçons, nous examinerons différentes façons de contrôler la taille des éléments afin de limiter le dépassement. Cependant, si vous avez besoin d'une taille fixe, vous pouvez également contrôler le comportement du trop-plein. Voyons maintenant&nbsp;!
 
 ## La propriété overflow
 
@@ -85,7 +84,8 @@ Vous pourriez également faire défiler sur l'axe x en utilisant [`overflow-x`](
 
 Comme pour `scroll`, une barre de défilement apparaîtra sur l'axe sélectionné qu'il y ait suffisamment de contenu ou pas pour créer un défilement.
 
-> **Note :** vous pouvez spécifier le défilement x et y simultanément en utilisant la propriété `overflow` en déclarant deux valeurs. Si deux mots clés sont spécifiés, le premier s'applique à `overflow-x` et le second à `overflow-y`. Sinon, `overflow-x` et `overflow-y` sont définis sur la même valeur. Par exemple, `overflow: scroll hidden` définira `overflow-x` sur `scroll` et `overflow-y` sur `hidden`.
+> [!NOTE]
+> Vous pouvez spécifier le défilement x et y simultanément en utilisant la propriété `overflow` en déclarant deux valeurs. Si deux mots clés sont spécifiés, le premier s'applique à `overflow-x` et le second à `overflow-y`. Sinon, `overflow-x` et `overflow-y` sont définis sur la même valeur. Par exemple, `overflow: scroll hidden` définira `overflow-x` sur `scroll` et `overflow-y` sur `hidden`.
 
 Si vous souhaitez que les barres de défilement n'apparaissent que s'il y a plus de contenu que la boîte ne peut en contenir, utilisez `overflow: auto`. Dans ce cas c'est le navigateur qui décidera d'afficher ou non les barres de défilement. Les navigateurs de bureau ne le font généralement que lorsqu'il y a suffisamment de contenu pour provoquer un débordement.
 
@@ -103,7 +103,7 @@ Les méthodes de mise en page modernes (comme étudiées dans le module [La mise
 
 Lorsque vous développez un site, vous devez toujours garder à l'esprit les problèmes de débordement. Vous devez tester des conceptions avec des quantités de contenu importantes et réduites, augmenter la taille de la police et vous assurer que votre CSS peut s'en sortir de manière efficace. La modification de la valeur d'`overflow` pour masquer le contenu ou ajouter des barres de défilement ne sera probablement réservée qu'à quelques rares cas particuliers - par exemple lorsque vous voulez spécifiquement une barre de défilement.
 
-## Testez vos compétences !
+## Testez vos compétences&nbsp;!
 
 Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de partir - voir (en anglais) [Testez vos compétences: overflow](/fr/docs/Learn/CSS/Building_blocks/Overflow_Tasks).
 
@@ -112,24 +112,3 @@ Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous so
 Cette courte leçon a introduit le concept de débordement ; vous comprenez maintenant que le CSS essaie de ne pas faire disparaître le contenu qui déborde car cela entraînerait des pertes de données. Vous avez découvert que vous pouvez gérer un débordement éventuel, et que vous devez également tester votre travail pour vous assurer que vous ne causez pas accidentellement un débordement problématique.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3.  [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

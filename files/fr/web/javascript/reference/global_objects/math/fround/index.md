@@ -1,24 +1,33 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/fround
 ---
+
 {{JSRef}}
 
-La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision "link to the wikipedia page on single precision") sur 32 bits qui est le plus proche du nombre fourni.
+La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
 
-{{EmbedInteractiveExample("pages/js/math-fround.html")}}
+{{InteractiveExample("JavaScript Demo: Math.fround()")}}
+
+```js interactive-example
+console.log(Math.fround(5.5));
+// Expected output: 5.5
+
+console.log(Math.fround(5.05));
+// Expected output: 5.050000190734863
+
+console.log(Math.fround(5));
+// Expected output: 5
+
+console.log(Math.fround(-5.05));
+// Expected output: -5.050000190734863
+```
 
 ## Syntaxe
 
-    Math.fround(x)
+```js
+Math.fround(x);
+```
 
 ### Paramètres
 
@@ -35,34 +44,31 @@ Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bi
 
 Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou `-Infinity`.
 
-`fround `étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`fround` étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
 ### Utiliser `Math.fround()`
 
 ```js
-Math.fround(0);     // 0
-Math.fround(1);     // 1
+Math.fround(0); // 0
+Math.fround(1); // 1
 
 // 1.337 ne peut pas être représenté correctement
 // sur 32 bits
 Math.fround(1.337); // 1.3370000123977661
 
-Math.fround(1.5);   // 1.5
-Math.fround(NaN);   // NaN
+Math.fround(1.5); // 1.5
+Math.fround(NaN); // NaN
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-math.fround', 'Math.fround')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.fround")}}
+{{Compat}}
 
 ## Voir aussi
 

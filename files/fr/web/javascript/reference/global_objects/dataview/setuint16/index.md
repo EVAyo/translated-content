@@ -1,25 +1,30 @@
 ---
 title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint16
 ---
+
 {{JSRef}}
 
 La méthode **`setUint16()`** permet d'enregister un entier non-signé sur 16 bits (type _unsigned short_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint16(1, 65535); // Max unsigned 16-bit integer
+
+console.log(view.getUint16(1));
+// Expected output: 65535
+```
 
 ## Syntaxe
 
-    dataview.setUint16(positionOctet, valeur [, littleEndian])
+```js
+dataview.setUint16(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 
@@ -52,15 +57,11 @@ dataview.getUint16(1); // 3
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setUint16")}}
+{{Compat}}
 
 ## Voir aussi
 

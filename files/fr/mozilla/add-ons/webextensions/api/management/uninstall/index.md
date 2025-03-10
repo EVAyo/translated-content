@@ -1,31 +1,23 @@
 ---
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - management
-  - uninstall
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Désinstalle une extension, compte tenu de son ID.
 
-Cette API requiert l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions). "management"
+Cette API requiert l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var uninstalling = browser.management.uninstall(
-  id,                  // string
-  options              // object
-)
+  id, // string
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -36,22 +28,22 @@ var uninstalling = browser.management.uninstall(
 
   - : `object`. l'objet qui peut contenir une propriété unique, `showConfirmDialog`. Si `showConfirmDialog` est `true`, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
 
-    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
+    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
     - Si `id` est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.uninstall")}}
+{{Compat}}
 
 ## Exemples
 
 Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.
 
-Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation réussit, l'extension n'est plus disponible pour le gérer.
 
 ```js
 var id = "my-addon-id";
@@ -66,13 +58,14 @@ uninstalling.then(null, onCanceled);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +92,4 @@ uninstalling.then(null, onCanceled);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,15 +1,8 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Graphisme
-  - Reference
-  - Référence(2)
-  - SVG
-  - Élément(2)
-translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
@@ -21,7 +14,11 @@ L'élément `line` est un élément de la catégorie des formes simples SVG, uti
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -39,13 +36,13 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing") ;
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") ;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent") ;
-- [Attributs de présentation ](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation") ;
-- {{ SVGAttr("class") }} ;
-- {{ SVGAttr("style") }} ;
-- {{ SVGAttr("externalResourcesRequired") }} ;
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)&nbsp;;
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;;
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'.c3.a9v.c3.a9nement_graphique)&nbsp;;
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_pr.c3.a9sentation)&nbsp;;
+- {{ SVGAttr("class") }}&nbsp;;
+- {{ SVGAttr("style") }}&nbsp;;
+- {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
 - {{ SVGAttr("transform") }}.
 
 ### Attributs spécifiques
@@ -57,13 +54,13 @@ html,body,svg { height:100% }
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement "en/DOM/SVGLineElement").
+Cet élément implémente l'interface [`SVGLineElement`](/fr/docs/DOM/SVGLineElement).
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ SVGElement("polygon") }} ;
+- {{ SVGElement("polygon") }}&nbsp;;
 - {{ SVGElement("path") }}.

@@ -1,23 +1,31 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString
 ---
+
 {{JSRef}}
 
-La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
+La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date1.toLocaleString("ar-EG"));
+// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number1 = 123456.789;
+
+console.log(number1.toLocaleString("de-DE"));
+// Expected output: "123.456,789"
+```
 
 ## Syntaxe
 
-    obj.toLocaleString()
+```js
+obj.toLocaleString();
+```
 
 ### Valeur de retour
 
@@ -25,9 +33,9 @@ Une chaîne de caractères qui représente l'objet en tenant compte de la locale
 
 ## Description
 
-La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
+La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
 
-Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
+Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
 
 ### Objets surchargeant la méthode toLocaleString
 
@@ -37,16 +45,11 @@ Cette fonction est destinée à fournir aux objets une méthode générique `to
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

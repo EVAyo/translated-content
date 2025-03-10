@@ -1,24 +1,33 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reverse
 ---
+
 {{JSRef}}
 
-La méthode **`reverse()`** transpose les éléments d'un tableau : le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
+La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
 
-{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+
+```js interactive-example
+const array1 = ["one", "two", "three"];
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log("reversed:", reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["three", "two", "one"]
+```
 
 ## Syntaxe
 
-    arr.reverse()
+```js
+arr.reverse();
+```
 
 ### Valeur de retour
 
@@ -40,7 +49,7 @@ L'exemple qui suit crée un tableau `monArray`, qui contient trois éléments, p
 var monArray = ["un", "deux", "trois"];
 monArray.reverse();
 
-console.log(monArray) // ["trois", "deux", "un"]
+console.log(monArray); // ["trois", "deux", "un"]
 ```
 
 ### Inverser l'ordre des éléments d'un objet semblable à un tableau
@@ -48,7 +57,7 @@ console.log(monArray) // ["trois", "deux", "un"]
 Dans l'exemple suivant, on crée un objet semblable à un tableau `a` qui contient trois éléments et une propriété `length`. On appelle ensuite `reverse()` grâce à `call()` sur cet objet pour inverser ses éléments :
 
 ```js
-const a = {0: 1, 1: 2, 2: 3, length: 3};
+const a = { 0: 1, 1: 2, 2: 3, length: 3 };
 
 console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
 
@@ -59,16 +68,11 @@ console.log(a); // {0: 3, 1: 2, 2 : 1, length: 3}
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.8', 'Array.prototype.reverse')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Voir aussi
 

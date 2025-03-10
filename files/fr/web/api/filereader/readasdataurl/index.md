@@ -1,109 +1,126 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-translation_of: Web/API/FileReader/readAsDataURL
+l10n:
+  sourceCommit: cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
 ---
-{{APIRef("API File")}}
 
-La méthode `readAsDataURL` permet de lire le contenu de l’objet  {{domxref("Blob")}} ou {{domxref("File")}} spécifié. À la fin de l’opération de lecture, la propriété {{domxref("FileReader.readyState","readyState")}} renvoie l’état `DONE`, et l’évènement {{event("loadend")}} se déclenche. À ce moment-là, l’attribut {{domxref("FileReader.result","result")}} contient les données dans une URL représentant les données du fichier sous forme de chaîne encodée en base64.
+{{APIRef("File API")}}
+
+La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le contenu d'un blob ([`Blob`](/fr/docs/Web/API/Blob)) ou d'un fichier ([`File`](/fr/docs/Web/API/File)). Lorsque l'opération de lecture est terminée, [`readyState`](/fr/docs/Web/API/FileReader/readyState) prend la valeur `DONE`, et l'évènement [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) est déclenché. À partir de ce moment, la propriété [`result`](/fr/docs/Web/API/FileReader/result) contient les données sous la forme d'une [URL de données](/fr/docs/Web/URI/Schemes/data) qui représente les données du fichier sous la forme d'une chaîne de caractères encodée en base64.
+
+> [!NOTE]
+> Pour un blob, [`result`](/fr/docs/Web/API/FileReader/result) ne peut pas être décodé en base64 sans avoir d'abord retiré la déclaration d'URL de données qui précède les données encodées. Pour récupérer uniquement la chaîne encodée en base 64, il faut d'abord supprimer le préfixe `data:*/*;base64,` du résultat.
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsDataURL(blob);
+```js
+readAsDataURL(blob);
+```
 
 ### Paramètres
 
 - `blob`
-  - : L’argument {{domxref("Blob")}} ou {{domxref("File")}} à partir duquel exécuter la lecture.
+  - : L'objet [`Blob`](/fr/docs/Web/API/Blob) ou [`File`](/fr/docs/Web/API/File) qu'on souhaite lire.
 
-## Exemple
+### Valeur de retour
 
-### HTML
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Exemples
+
+### Exemple simple
+
+#### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Aperçu de l’image...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Prévisualisation de l'image…" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
+  const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // on convertit l'image en une chaîne de caractères base64
+      preview.src = reader.result;
+    },
+    false,
+  );
 
-  if (file) {
-    reader.readAsDataURL(file);
-  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 }
 ```
 
-### Résultat en direct
+#### Résultat
 
-{{EmbedLiveSample("Exemple", "100%", 240)}}
+{{EmbedLiveSample("", "100%", 240)}}
 
+### Lire plusieurs fichiers
 
-
-## Exemple de lecture de plusieurs fichiers
-
-### HTML
+#### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector("#preview");
+  const files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
+    // On s'assure que `file.name` termine par
+    // une des extensions souhaitées
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+      const reader = new FileReader();
 
-    // Veillez à ce que `file.name` corresponde à nos critères d’extension
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-      var reader = new FileReader();
-
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild( image );
-      }, false);
+      reader.addEventListener(
+        "load",
+        () => {
+          const image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
-    [].forEach.call(files, readAndPreview);
+    Array.prototype.forEach.call(files, readAndPreview);
   }
-
 }
 ```
 
-> **Note :** Le constructeur [`FileReader()`](/en-US/docs/Web/API/FileReader) n’est pas pris en charge dans les versions IE antérieures à Internet Explorer 10. Pour un code compatible avec tous les navigateurs, accédez à notre [solution d’aperçu d’image multinavigateur](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html). Examinez également cette [alternative plus puissante](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> [!NOTE]
+> Le constructeur [`FileReader()`](/fr/docs/Web/API/FileReader) n'était pas pris en charge pour les versions d'Internet Explorer antérieures à IE 10. Vous pouvez voir [notre exemple de solution compatible entre les navigateurs pour la prévisualisation d'image](https://mdn.dev/archives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html), ainsi que [cet autre exemple encore plus puissant](https://mdn.dev/archives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaire         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName("API File", "#FileReader-interface", "FileReader")}} | {{Spec2("API File")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsDataURL")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("FileReader")}}
+- [`FileReader`](/fr/docs/Web/API/FileReader)
+- [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)

@@ -1,24 +1,33 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la propriété propre d'un objet (c'est-à-dire une propriété directement présente et pas héritée via la chaîne de prototypes).
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptor1 = Object.getOwnPropertyDescriptor(object1, "property1");
+
+console.log(descriptor1.configurable);
+// Expected output: true
+
+console.log(descriptor1.value);
+// Expected output: 42
+```
 
 ## Syntaxe
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+```js
+Object.getOwnPropertyDescriptor(obj, prop);
+```
 
 ### Paramètres
 
@@ -42,7 +51,7 @@ Un descripteur de propriété est un enregistrement qui dispose des attributs su
 - **`writable`**
   - : `true` si et seulement si la valeur associée à la propriété peut être changée (pour les descripteurs de données uniquement).
 - **`get`**
-  - : Une fonction qui joue le rôle d'accesseur (_getter_) pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur (pour les descripteurs d'accesseurs uniquement).
+  - : Une fonction qui joue le rôle d'accesseur (_getter_) pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur (pour les descripteurs d'accesseurs uniquement).
 - **`set`**
   - : Une fonction qui joue le rôle de mutateur (_setter_) pour la propriété ou `undefined` s'il n'y a pas de tel mutateur (pour les descripteurs d'accesseurs uniquement).
 - **`configurable`**
@@ -55,7 +64,11 @@ Un descripteur de propriété est un enregistrement qui dispose des attributs su
 ```js
 var o, d;
 
-o = { get toto() { return 17; } };
+o = {
+  get toto() {
+    return 17;
+  },
+};
 d = Object.getOwnPropertyDescriptor(o, "toto");
 // d : {
 //       configurable: true,
@@ -75,9 +88,10 @@ d = Object.getOwnPropertyDescriptor(o, "truc");
 
 o = {};
 Object.defineProperty(o, "machin", {
-                                      value: 8675309,
-                                      writable: false,
-                                      enumerable: false });
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
 d = Object.getOwnPropertyDescriptor(o, "machin");
 // d : {
 //        value: 8675309,
@@ -107,15 +121,11 @@ Object.getOwnPropertyDescriptor("toto", 0);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}         | {{Spec2('ES6')}}         |                                                        |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Voir aussi
 

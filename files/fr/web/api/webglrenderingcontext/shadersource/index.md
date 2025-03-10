@@ -1,28 +1,24 @@
 ---
 title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/en-US/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
+La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
 
 ## Syntaxe
 
-    void gl.shaderSource(shader, source);
+```js
+void gl.shaderSource(shader, source);
+```
 
 ### Parameters
 
 - shader
-  - : Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.
+  - : Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.
 - source
-  - : Une {{domxref("DOMString")}} contenant le code source GLSL à définir.
+  - : Une {{domxref("DOMString")}} contenant le code source GLSL à définir.
 
 ### Valeur retournée
 
@@ -39,14 +35,11 @@ var source = gl.getShaderSource(shader);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire                           |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "shaderSource")}}                             | {{Spec2('WebGL')}}             | Définition initiale.                  |
-| {{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.shaderSource")}}
+{{Compat}}
 
 ## Voir aussi
 

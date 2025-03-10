@@ -1,32 +1,36 @@
 ---
 title: ビット否定 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_not
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット否定演算子 (`~`) は、オペランドの各ビットを反転します。他のビット演算子と同様、オペランドを 32 ビット符号付き整数に変換します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = -3; // 11111111111111111111111111111101
+
+console.log(~a); // 11111111111111111111111111111010
+// Expected output: -6
+
+console.log(~b); // 00000000000000000000000000000010
+// Expected output: 2
+```
 
 ## 構文
 
 ```js
-~a
+~a;
 ```
 
 ## 解説
 
 オペランドは 32 ビットの整数値に変換され、ビット (ゼロまたは 1) の並びによって表現されます。32 ビットを超える数値は最上位のビットが破棄されます。例えば、次の 32 ビットを超える整数は 32 ビット整数に変換されます。
 
-```js
+```plain
 変換前: 11100110111110100000000000000110000000000001
 変換後:             10100000000000000110000000000001
 ```
@@ -41,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 | 1   | 0     |
 
 ```js
- 9 (10 進数) = 00000000000000000000000000001001 (2 進数)
+ 9 (10 進数) = 00000000000000000000000000001001 (2 進数)
                --------------------------------
 ~9 (10 進数) = 11111111111111111111111111110110 (2 進数) = -10 (10 進数)
 ```
@@ -57,9 +61,9 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ### ビット否定の使用
 
 ```js
-~0;  // -1
+~0; // -1
 ~-1; // 0
-~1;  // -2
+~1; // -2
 ```
 
 ## 仕様書
@@ -72,4 +76,4 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)

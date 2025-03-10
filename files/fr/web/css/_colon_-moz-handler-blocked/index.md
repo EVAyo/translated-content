@@ -1,14 +1,9 @@
 ---
-title: ':-moz-handler-blocked'
+title: :-moz-handler-blocked
 slug: Web/CSS/:-moz-handler-blocked
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-handler-blocked
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.1")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-handler-blocked`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été bloqué par l'utilisateur.
 

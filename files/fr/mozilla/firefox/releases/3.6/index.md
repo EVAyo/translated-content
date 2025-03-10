@@ -1,46 +1,44 @@
 ---
 title: Firefox 3.6 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.6
-tags:
-  - Firefox
-  - Firefox 3.6
-translation_of: Mozilla/Firefox/Releases/3.6
-original_slug: Mozilla/Firefox/Versions/3.6
 ---
-1.  Notes de versions pour développeurs
 
-    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+{{FirefoxSidebar}}
 
-2.  Modules complémentaires
+1. Notes de versions pour développeurs
 
-    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
-    2.  [Thèmes](/fr/Add-ons/Themes)
+   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-3.  Fonctionnement interne de Firefox
+2. Modules complémentaires
 
-    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
-    2.  [Gecko](/fr/docs/Mozilla/Gecko)
-    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7.  [MFBT](/fr/docs/Mozilla/MFBT)
-    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
-    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
-4.  Développer et contribuer
+3. Fonctionnement interne de Firefox
 
-    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5.  [Localisation](/fr/docs/Mozilla/Localization)
-    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
-    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. [Le projet Mozilla](/fr/docs/Mozilla)
+   2. [Gecko](/fr/docs/Mozilla/Gecko)
+   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+   7. [MFBT](/fr/docs/Mozilla/MFBT)
+   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
+   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+
+4. Développer et contribuer
+
+   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
+   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+   5. [Localisation](/fr/docs/Mozilla/Localization)
+   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+   7. [Assurance qualité](/fr/docs/Mozilla/QA)
+   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.
 
@@ -48,32 +46,32 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 
 ### CSS
 
-- [Utilisation de dégradés](/fr/docs/CSS/Using_CSS_gradients)
-  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/-moz-linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/-moz-radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/background).
-- [Fonds multiples](/fr/docs/CSS/Fonds_multiples)
+- [Utilisation de dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/background).
+- [Fonds multiples](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : La propriété [`background`](/fr/docs/Web/CSS/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/background-attachment)[`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-position`](/fr/docs/Web/CSS/background-position) et [`background-repeat`](/fr/docs/Web/CSS/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
-- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/CSS/Media_queries#Fonctionnalit.C3.A9s_de_m.C3.A9dias_sp.C3.A9cifiques_.C3.A0_Mozilla)
-  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/CSS/Media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
-- [Redimensionnement d'images de fond](/fr/docs/CSS/Scaling_background_images)
-  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](http://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/-moz-background-size).
-- [Support des polices WOFF](/fr/docs/WOFF)
+- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
+  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
+- [Redimensionnement d'images de fond](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/background-size).
+- [Support des polices WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
   - : [`@font-face`](/fr/docs/Web/CSS/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
-- [Evènements pointeurs](/fr/docs/CSS/pointer-events)
+- [Evènements pointeurs](/fr/docs/Web/CSS/pointer-events)
   - : La propriété [`pointer-events`](/fr/docs/Web/CSS/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
 
 #### Autres changements CSS
 
-- L'unité de longueur [`rem`](/fr/docs/CSS/longueur) de [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
-- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
-- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
+- L'unité de longueur [`rem`](/fr/docs/Web/CSS/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
+- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
+- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
 - Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/display) table fonctionnent beaucoup mieux.
-- Ajout de [`:-moz-locale-dir(ltr)`](</fr/docs/Web/CSS/:-moz-locale-dir(ltr)>) et [`:-moz-locale-dir(rtl)`](</fr/docs/Web/CSS/:-moz-locale-dir(rtl)>) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
+- Ajout de [`:-moz-locale-dir(ltr)`](</fr/docs/Web/CSS/:-moz-locale-dir(ltr)>) et [`:-moz-locale-dir(rtl)`](</fr/docs/Web/CSS/:-moz-locale-dir(rtl)>) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
 - Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Element/input) `checkbox` dont l'attribut `indeterminate` est `true`.
 - Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
 
 ### HTML
 
-- [Utilisation de fichiers à partir d'applications Web](/fr/docs/Using_files_from_web_applications)
+- [Utilisation de fichiers à partir d'applications Web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Le support de la nouvelle API de fichier HTML5 a été ajouté à Gecko, ce qui permet à des applications Web d'accéder à des fichiers locaux sélectionnés par l'utilisateur.
 - Support des affiches pour les vidéos HTML5
   - : L'attribut `poster` est pris en charge pour l'élément [`<video>`](/fr/docs/Web/HTML/Element/video), ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.
@@ -94,41 +92,41 @@ Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonction
 ### DOM
 
 - Terminaison des web workers par eux-mêmes
-  - : Les web [workers](/fr/docs/DOM/Using_web_workers) prennent désormais en charge la méthode [`nsIWorkerScope.close()`](</fr/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>), qui leur permet de se terminer d'eux-mêmes.
+  - : Les web [workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) prennent désormais en charge la méthode [`nsIWorkerScope.close()`](</fr/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>), qui leur permet de se terminer d'eux-mêmes.
 - Glisser-déposer de fichiers
-  - : L'objet [`DataTransfer`](/fr/docs/DragDrop/DataTransfer) fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.
+  - : L'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.
 - Vérification pour voir si un élément correspond à un sélecteur CSS
-  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
-- [Dispositf de détection de l'orientation](/fr/docs/Detecting_device_orientation)
+  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
+- [Dispositf de détection de l'orientation](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Le contenu peut à présent détecter l'orientation de l'appareil s'il dispose d'un accéléromètre, à l'aide de l'évènement `MozOrientation`. Firefox 3.6 gère notamment l'accéléromètre des ordinateurs portables Mac.
 - [Détection des changements de largeur et hauteur d'un document](/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged)
   - : Le nouvel évènement `MozScrollAreaChanged` est déclenché lorsqu'une des propriétés `scrollWidth` ou `scrollHeight` d'un document change.
 
 <!---->
 
-- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
-- Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/DOM/window.mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/DOM/window.mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
+- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
+- Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/Web/API/Window/mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/Web/API/Window/mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
 - La nouvelle propriété `mozScreenPixelsPerCSSPixel` de [`nsIDOMWindowUtils`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils) uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.
-- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/DOM/window.onhashchange) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
-- L'attribut [`document.readyState`](/fr/docs/DOM/document.readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
-- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/DOM/element.classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
+- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/Web/API/Window/hashchange_event) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
+- L'attribut [`document.readyState`](/fr/docs/Web/API/Document/readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
+- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/Web/API/Element/classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
 - `localName` et `namespaceURI` dans les documents HTML se comportent à présent comme dans les documents XHTML : `localName` est renvoyé en minuscules et la propriété `namespaceURI` pour les éléments HTML est `"http://www.w3.org/1999/xhtml"`.
-- [`element.getElementsByTagNameNS`](/fr/docs/DOM/element.getElementsByTagNameNS) son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour [`document.getElementsByTagNameNS`](/fr/docs/DOM/document.getElementsByTagNameNS).
+- [`element.getElementsByTagNameNS`](/fr/docs/Web/API/Element/getElementsByTagNameNS) son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour [`document.getElementsByTagNameNS`](/fr/docs/Web/API/Document/getElementsByTagNameNS).
 - Ajout de la gestion des adresses dans la géolocalisation via l'interface [`nsIDOMGeoPositionAddress`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) et d'un nouveau champ dans [`nsIDOMGeoPosition`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition).
 - La fonction [`window.getComputedStyle`](/fr/docs/Web/API/Window/getComputedStyle) renvoie à présent les guillemets autour des valeurs url().
 
 ### XPath
 
 - Gestion de la méthode XPath choose()
-  - : La méthode [`choose()`](/fr/docs/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/XPath).
+  - : La méthode [`choose()`](/fr/docs/Web/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/Web/XPath).
 
 ## Pour les développeurs XUL et les développeurs d'extensions
 
-Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Updating extensions for Firefox 3.6](/fr/docs/Updating_extensions_for_Firefox_3.6), qui offre une vue d'ensemble sur les changements qui pourraient affecter vos extensions. Les développeurs de Plug-in devraient lire [Updating plug-ins for Firefox 3.6](/fr/docs/Updating_plug-ins_for_Firefox_3.6).
+Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Updating extensions for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_extensions), qui offre une vue d'ensemble sur les changements qui pourraient affecter vos extensions. Les développeurs de Plug-in devraient lire [Updating plug-ins for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_plug-ins).
 
 ### Nouvelles fonctionnalités
 
-- [Détection de l'orientation de l'appareil](/fr/docs/Detecting_device_orientation)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Le contenu peut maintenant détecter l'orientation de l'appareil si il possède un accéléromètre, en utilisant l'évènement [`MozOrientation`](/fr/docs/DOM/MozOrientation). Firefox 3.6 supporte l'accéléromètre des ordinateurs portables Mac.
 - [Surveillance de l'activité HTTP](/fr/docs/Monitoring_HTTP_activity)
   - : Vous pouvez maintenant surveiller en temps réel les données HTTP demandées et reçues.
@@ -147,9 +145,9 @@ Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Upd
 - [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
   - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
 - mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
-  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
+  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
 - Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.
-  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
+  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
 
 ### Préférences
 
@@ -157,7 +155,7 @@ Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Upd
 
 ### Thèmes
 
-Voir [Updating themes for Firefox 3.6](/fr/docs/Updating_themes_for_Firefox_3.6) pour la liste des changements liés aux thèmes.
+Voir [Updating themes for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) pour la liste des changements liés aux thèmes.
 
 - [Thèmes légers](/fr/docs/Themes/Lightweight_themes)
   - : Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes [Personas](http://www.getpersonas.com/) dans Firefox.
@@ -165,13 +163,13 @@ Voir [Updating themes for Firefox 3.6](/fr/docs/Updating_themes_for_Firefox_3.6)
 ### Divers
 
 - Firefox n'a plus la charge des modules tiers installé dans son répertoire des modules internes. Cela contribue à assurer la stabilité en empêchant des composants tiers buggés d'être exécuté. Les développeurs qui installent des composants de cette façon doivent [refaire leurs modules sous forme de paquets XPI](/fr/docs/Migrating_raw_components_to_add-ons) afin qu'ils puissent être installés normalement.
-- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
-- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
-- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
-- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
-- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
-- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
-- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
+- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
+- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
+- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
+- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
+- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
+- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
+- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
 - Pour l'interface [`nsILocalFileMac`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac), deux méthodes ont étés retirées : `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - Le nouveau module de code [`NetUtils.jsm`](/fr/docs/JavaScript_code_modules/NetUtil.jsm) apporte une méthode facile à utiliser pour copier les données de manière asynchrone à partir d'un flux d'entrée vers un flux de sortie.
 - Le nouveau module de code [`openLocationLastURL.jsm`](/fr/docs/JavaScript_code_modules/openLocationLastURL.jsm), facilite la lecture et la modification de la valeur de l'URL gardée en mémoire de la boîte de dialogue "Ouvrir le fichier", tout en prenant bien en compte le mode de navigation privée.
@@ -234,12 +232,12 @@ Les modifications suivantes ont été faites :
 
 ### Changements dans l'accessibilitée du code
 
-- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
+- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
 - Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.
 
-## Voir également
+## Voir aussi
 
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)

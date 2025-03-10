@@ -1,12 +1,8 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 Le type **`<blend-mode>`** est un ensemble de mots-clés qui permettent de décrire les différents modes de fusion (_blend modes_). Ce type de valeur est utilisé pour les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
@@ -66,13 +62,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('normal', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### multiply
 
@@ -84,13 +79,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
 
-{{ EmbedLiveSample('multiply', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### screen
 
@@ -102,13 +96,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
 
-{{ EmbedLiveSample('screen', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### overlay
 
@@ -120,13 +113,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
 
-{{ EmbedLiveSample('overlay', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### darken
 
@@ -138,13 +130,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
 
-{{ EmbedLiveSample('darken', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### lighten
 
@@ -156,13 +147,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
 
-{{ EmbedLiveSample('lighten', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color-dodge
 
@@ -174,13 +164,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
 
-{{ EmbedLiveSample('color-dodge', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color-burn
 
@@ -192,13 +181,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
 
-{{ EmbedLiveSample('color-burn', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### hard-light
 
@@ -210,13 +198,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
 
-{{ EmbedLiveSample('hard-light', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### soft-light
 
@@ -228,13 +215,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
 
-{{ EmbedLiveSample('soft-light', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### difference
 
@@ -246,13 +232,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
 
-{{ EmbedLiveSample('difference', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### exclusion
 
@@ -264,13 +249,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
 
-{{ EmbedLiveSample('exclusion', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### hue
 
@@ -282,13 +266,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
 
-{{ EmbedLiveSample('hue', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### saturation
 
@@ -300,13 +283,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
 
-{{ EmbedLiveSample('saturation', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### color
 
@@ -318,13 +300,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
 
-{{ EmbedLiveSample('color', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ### luminosity
 
@@ -336,13 +317,12 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```
 
-{{ EmbedLiveSample('luminosity', "300", "350") }}
+{{ EmbedLiveSample('', "300", "350") }}
 
 ## L'interpolation des modes de fusion
 
@@ -350,13 +330,11 @@ Il n'y a pas d'interpolation pour les modes de fusion. Toute transition se produ
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;')}} | {{Spec2('Compositing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

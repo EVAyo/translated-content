@@ -1,19 +1,19 @@
 ---
 title: element
 slug: Web/XSLT/Element/element
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:element>` crée un élément dans le document de sortie.
 
 ### Syntaxe
 
-    <xsl:element name=NOM namespace=URI use-attribute-sets=LISTE-DE-NOMS >
-    	MODÈLE
-    </xsl:element>
+```xml
+<xsl:element name=NOM namespace=URI use-attribute-sets=LISTE-DE-NOMS >
+  MODÈLE
+</xsl:element>
+```
 
 ### Attribut obligatoire
 
@@ -33,7 +33,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.1.2](http://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element).
+[XSLT 1.0, section 7.1.2](https://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element).
 
 ### Support Gecko
 

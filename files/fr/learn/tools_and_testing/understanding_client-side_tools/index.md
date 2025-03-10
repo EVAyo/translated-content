@@ -1,20 +1,8 @@
 ---
 title: Understanding client-side web development tools
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
-tags:
-  - Beginner
-  - CSS
-  - Deployment
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - TopicStub
-  - Transformation
-  - client-side
-  - linting
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
+
 {{LearnSidebar}}
 
 Les outils côté client peuvent être intimidants, mais cette série d'articles vise à illustrer le but de certains des types d'outils côté client les plus courants, à expliquer les outils que vous pouvez enchaîner, comment les installer à l'aide de gestionnaires de packages et les contrôler à l'aide de la ligne de commande. Nous terminons en fournissant un exemple complet de chaîne d'outils vous montrant comment devenir productif.
@@ -32,6 +20,6 @@ Vous devez vraiment apprendre les bases des langages [HTML](/fr/docs/Learn/HTML)
 - [Principes de base de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
   - : Dans cet article, nous examinerons en détail les gestionnaires de paquets pour comprendre comment nous pouvons les utiliser dans nos propres projets - pour installer les dépendances des outils de projet, les maintenir à jour, etc.
 - [Introduction d'une chaîne d'outils complète](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-  - : Dans les deux derniers articles de la série, nous solidifierons vos connaissances en matière d'outillage en vous guidant tout au long du processus de création d'un exemple de chaîne d'outils d'étude de cas. Nous irons de la mise en place d'un environnement de développement sensible et de la mise en place d'outils de transformation au déploiement effectif de votre application sur Netlify. Dans cet article, nous allons présenter l'étude de cas, configurer notre environnement de développement et configurer nos outils de transformation de code.
+  - : Dans les deux derniers articles de la série, nous solidifierons vos connaissances en matière d'outillage en vous guidant tout au long du processus de création d'un exemple de chaîne d'outils d'étude de cas. Nous irons de la mise en place d'un environnement de développement sensible et de la mise en place d'outils de transformation au déploiement effectif de votre application sur Netlify. Dans cet article, nous allons présenter l'étude de cas, configurer notre environnement de développement et configurer nos outils de transformation de code.
 - [Déployer notre application](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
   - : Dans le dernier article de notre série, nous prenons l'exemple de chaîne d'outils que nous avons construit dans l'article précédent et nous l'ajoutons afin de pouvoir déployer notre exemple d'application. Nous poussons le code sur GitHub, le déployons à l'aide de Netlify et vous montrons même comment ajouter un test simple au processus.

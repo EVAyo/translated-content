@@ -1,18 +1,13 @@
 ---
 title: SVGTitleElement
 slug: Web/API/SVGTitleElement
-tags:
-  - Interface Title SVG
-  - SVG
-  - SVG DOM
-  - Title
-translation_of: Web/API/SVGTitleElement
 ---
+
 {{APIRef("SVG")}}
 
 ## Interface DOM de l'élément SVG `title`
 
-L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title") }}.
+L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title") }}.
 
 ### Aperçu de l'interface
 
@@ -48,7 +43,7 @@ L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title
 
 ## Propriétés
 
-L'interface `SVGTitleElement` n'a pas de propriétés spécifiques.
+L'interface `SVGTitleElement` n'a pas de propriétés spécifiques.
 
 ## Méthodes
 
@@ -56,11 +51,8 @@ L'interface `SVGTitleElement` n'a pas de métodes spécifiques.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "struct.html#InterfaceSVGTitleElement", "SVGTitleElement")}}     | {{Spec2("SVG2")}} | Suppression de l'héritage de {{domxref("SVGLangSpace")}} et {{domxref("SVGStylable")}}. |
-| {{SpecName("SVG1.1", "struct.html#InterfaceSVGTitleElement", "SVGTitleElement")}} | {{Spec2("SVG1.1")}} | Définition initiale.                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGTitleElement")}}
+{{Compat}}

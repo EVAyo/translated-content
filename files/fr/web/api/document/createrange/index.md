@@ -1,22 +1,19 @@
 ---
 title: Document.createRange
 slug: Web/API/Document/createRange
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-translation_of: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 Retourne un objet {{domxref("Range")}}.
 
 ## Syntaxe
 
-    range = document.createRange();
+```js
+range = document.createRange();
+```
 
-`range` devient un objet {{domxref("Range")}}.
+`range` devient un objet {{domxref("Range")}}.
 
 ## Exemple
 
@@ -29,7 +26,7 @@ range.setEnd(endNode, endOffset);
 
 ## Notes
 
-Une fois un objet `Range` créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
+Une fois un objet `Range` créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
 
 ## Spécification
 
